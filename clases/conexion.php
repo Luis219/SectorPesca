@@ -15,6 +15,7 @@
   // Selecciona la colección llamada "usuarios" de la base de datos "pruebas"
   $barcos = $dbSectorPesquero->barcos;
   $usuarios =$dbSectorPesquero->usuarios;
+  $pesca =$dbSectorPesquero->pesca;
   
 
   

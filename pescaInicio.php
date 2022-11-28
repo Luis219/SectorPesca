@@ -1,7 +1,7 @@
 <?php
    include_once 'clases/conexion.php';
 
-   $cursor = $barcos->find();
+   $cursor = $pesca->find();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,9 +17,9 @@
 <body>
 
 <div class="card mt-3 mb-3 bg-light">
-<a href="barcoAgregar.php" class="btn btn-primary">Agregar</a>
+<a href="pescaAgregar.php" class="btn btn-primary">Agregar</a>
             <div class="card-header text-center">
-                <h5>Embarcaciones</h5>
+                <h5>Pesca</h5>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -27,9 +27,9 @@
                         <thead class="table-primary">
                             <tr>
                                 <th scope="col">Id</th>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Matricula</th>
-                                <th scope="col">Tonelaje</th>
+                                <th scope="col">Barco</th>
+                                <th scope="col">descripcion</th>
+                                <th scope="col">Hoario de salida</th>
                                 <th scope="col" style="text-align:right"></th>
                             </tr>
                         </thead>
@@ -37,13 +37,13 @@
                             <?php foreach($cursor as $document) {?>
                                 <tr>
                                     <th scope="row"><?php echo $document['_id']; ?></th>
-                                    <td><?php echo $document['nombre']; ?></td>
-                                    <td><?php echo $document['matricula']; ?></td>
-                                    <td><?php echo $document['tonelaje']; ?></td>
+                                    <td><?php echo $document['barco_id']; ?></td>
+                                    <td><?php echo $document['descripcion']; ?></td>
+                                    <td><?php echo $document['horarioSalida']; ?></td>
                                     <!-- Delete Button -->
                                     <td style="text-align:right">
-                                        <a href="barcoEliminar.php?id=<?php echo $document['_id']; ?>" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                        <a href="barcoActualizar.php?id=<?php echo $document['_id']; ?>" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        <a href="pescaEliminar.php?id=<?php echo $document['_id']; ?>" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                        <a href="pescaActualizar.php?id=<?php echo $document['_id']; ?>" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                     </td>
                                 </tr>
                             <?php } ?>
