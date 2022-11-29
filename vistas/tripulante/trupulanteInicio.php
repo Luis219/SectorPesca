@@ -1,23 +1,37 @@
 <?php
 include_once '../../clases/conexion.php';
 
-   $cursor = $tripulante->find();
+$cursor = $tripulante->find();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Inicio tripulante</title>
 </head>
-<body>
 
-<div class="card mt-3 mb-3 bg-light">
-<a href="tripulanteAgregar.php" class="btn btn-primary">Agregar</a>
+<body>
+    <!-- Barra de navegación -->
+    <?php
+    include_once('../template.php')
+    ?>
+    <!-- Fin barra de navegación -->
+
+    <div class="contenidoFormulario">
+
+        <div class="card mt-3 mb-3 bg-light">
+            <a href="tripulanteAgregar.php" class="btn btn-primary">Agregar</a>
             <div class="card-header text-center">
                 <h5>Tripulación</h5>
             </div>
@@ -34,16 +48,16 @@ include_once '../../clases/conexion.php';
                                 <th scope="col" style="text-align:right"></th>
                             </tr>
                         </thead>
-                        <tbody  >
-                            <?php foreach($cursor as $document) {?>
+                        <tbody>
+                            <?php foreach ($cursor as $document) { ?>
                                 <tr>
                                     <th scope="row"><?php echo $document['_id']; ?></th>
                                     <td><?php echo $document['nombres']; ?></td>
-                                    <td><?php  $id= $document['barco_id'];
-                                    $cursor2 = $barcos->findOne(["_id"=>($id)]);
-                                    echo $cursor2['nombre'] ; ?></td>
-                                   }
-                                    
+                                    <td><?php $id = $document['barco_id'];
+                                        $cursor2 = $barcos->findOne(["_id" => ($id)]);
+                                        echo $cursor2['nombre']; ?></td>
+                                    }
+
                                     <td><?php echo $document['cedula']; ?></td>
                                     <td><?php echo $document['correo']; ?></td>
                                     <!-- Delete Button -->
@@ -58,6 +72,7 @@ include_once '../../clases/conexion.php';
                 </div>
             </div>
         </div>
-    
+    </div>
 </body>
+
 </html>

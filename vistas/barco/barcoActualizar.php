@@ -21,6 +21,12 @@ include_once '../../controladores/barco/barcoActualizar.php';
 </head>
 
 <body>
+    <!-- Barra de navegación -->
+    <?php
+    include_once('../template.php')
+    ?>
+    <!-- Fin barra de navegación -->
+
     <div class="contenidoFormulario">
         <nav class="navbar navbar-dark bg-primary">
             <div class="container-fluid">

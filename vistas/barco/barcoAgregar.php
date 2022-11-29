@@ -19,42 +19,49 @@ include_once '../../controladores/barco/barcoAgregar.php';
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <title>Add Student</title>
+    <title>Agregar barco</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-primary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Empresa de Pesca</a>
-        </div>
-    </nav>
-    <div class="container">
-        <div class="card mt-3 mb-2 bg-light">
-            <h4 class="card-title mx-auto mt-4">Nueva Embarcación</h4>
-            <div class="card-body">
-                <form method="POST" class="my-3 mx-3">
+    <!-- Barra de navegación -->
+    <?php
+    include_once('../template.php')
+    ?>
+    <!-- Fin barra de navegación -->
 
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Nombre</label>
-                        <input type="text" placeholder="ex: Chamara" class="form-control" id="name" name="txtNombre" aria-describedby="name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="address" class="form-label">Matricula</label>
-                        <input type="text" placeholder="ex: Kurunegala" class="form-control" id="address" name="txtMatricula" aria-describedby="address">
-                    </div>
-                    <div class="mb-3">
-                        <label for="contact" class="form-label">Tonelaje</label>
-                        <input type="number" placeholder="ex: 761234568" class="form-control" id="contact" name="txtTonelaje" aria-describedby="address">
-                    </div>
-                    <div class="d-grid gap-2 col-6 mx-auto">
-                        <input type="submit" name="submit" class="btn btn-primary" value="Insert Student" />
-                        <a href="barcoVista.php" class="btn btn-warning">View Students</a>
-                    </div>
-                </form>
+    <div class="contenidoFormulario">
+        <nav class="navbar navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Empresa de Pesca</a>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="card mt-3 mb-2 bg-light">
+                <h4 class="card-title mx-auto mt-4">Nueva Embarcación</h4>
+                <div class="card-body">
+                    <form method="POST" class="my-3 mx-3">
+
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre</label>
+                            <input type="text" placeholder="ex: Chamara" class="form-control" id="name" name="txtNombre" aria-describedby="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Matricula</label>
+                            <input type="text" placeholder="ex: Kurunegala" class="form-control" id="address" name="txtMatricula" aria-describedby="address">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contact" class="form-label">Tonelaje</label>
+                            <input type="number" placeholder="ex: 761234568" class="form-control" id="contact" name="txtTonelaje" aria-describedby="address">
+                        </div>
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <input type="submit" name="submit" class="btn btn-primary" value="Insert Student" />
+                            <a href="barcoVista.php" class="btn btn-warning">View Students</a>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
