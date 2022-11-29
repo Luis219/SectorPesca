@@ -1,4 +1,4 @@
-<?php
+3<?php
    include_once 'clases/conexion.php';
 
    $cursor = $barcos->find();
