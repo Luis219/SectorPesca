@@ -10,12 +10,13 @@
   $mongo= new Mongo("mongodb://localhost:27017");
   
   // Selecciona la base de datos llamada "pruebas"
-  $dbSectorPesquero = $mongo->sectorPesquero;
+  $dbSectorPesquero = $mongo->proyectosectorPesquero;
   
   // Selecciona la colección llamada "usuarios" de la base de datos "pruebas"
   $barcos = $dbSectorPesquero->barcos;
   $usuarios =$dbSectorPesquero->usuarios;
   $pesca =$dbSectorPesquero->pesca;
+  $tripulante =$dbSectorPesquero->tripulante;
   
 
   

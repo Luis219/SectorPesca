@@ -1,5 +1,5 @@
 <?php
-    include_once 'clases/conexion.php';
+      include_once '../../clases/conexion.php';
 
     $id = $_GET['id'];
 
@@ -7,5 +7,5 @@
 
     echo "<div class='alert alert-success'> Eliminado exitosamente </div>";
 
-    header("location: barcoVista.php"); //reroute to home page
+    header("location:../../vistas/barco/barcoVista.php"); //reroute to home page
 ?>

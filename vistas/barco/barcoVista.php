@@ -1,5 +1,5 @@
-3<?php
-   include_once 'clases/conexion.php';
+<?php
+    include_once '../../clases/conexion.php';
 
    $cursor = $barcos->find();
 ?>
@@ -42,7 +42,7 @@
                                     <td><?php echo $document['tonelaje']; ?></td>
                                     <!-- Delete Button -->
                                     <td style="text-align:right">
-                                        <a href="barcoEliminar.php?id=<?php echo $document['_id']; ?>" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                        <a href="../../controladores/barco/barcoEliminar.php?id=<?php echo $document['_id']; ?>" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                                         <a href="barcoActualizar.php?id=<?php echo $document['_id']; ?>" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                     </td>
                                 </tr>

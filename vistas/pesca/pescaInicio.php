@@ -1,5 +1,5 @@
 <?php
-   include_once 'clases/conexion.php';
+include_once '../../clases/conexion.php';
 
    $cursor = $pesca->find();
 ?>
@@ -42,7 +42,7 @@
                                     <td><?php echo $document['horarioSalida']; ?></td>
                                     <!-- Delete Button -->
                                     <td style="text-align:right">
-                                        <a href="pescaEliminar.php?id=<?php echo $document['_id']; ?>" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                        <a href="../../controladores/pesca/pescaEliminar.php?id=<?php echo $document['_id']; ?>" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                                         <a href="pescaActualizar.php?id=<?php echo $document['_id']; ?>" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                     </td>
                                 </tr>
