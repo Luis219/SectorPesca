@@ -15,7 +15,7 @@ $id="";
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Styles -->
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -32,9 +32,8 @@ $id="";
     <div class="contenidoFormulario">
 
         <div class="card mt-3 mb-3 bg-light">
-            <a href="tripulanteAgregar.php" class="btn btn-primary">Agregar</a>
             <div class="card-header text-center">
-                <h5>Tripulación</h5>
+                <h5>Tripulación </h5>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -46,6 +45,7 @@ $id="";
                                 <th scope="col">Barco</th>
                                 <th scope="col">Cédula</th>
                                 <th scope="col">Correo</th>
+                                <th> <a id="btn" href="tripulanteAgregar.php" class="btn btn-secondary" ><i class="fa fa-plus"></i></a></th>
                                 <th scope="col" style="text-align:right"></th>
                             </tr>
                         </thead>
