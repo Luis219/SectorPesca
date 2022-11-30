@@ -18,7 +18,7 @@
                 </li>
             </ul>
             <div class="navbar-fluid">
-                <img src="/assets/img/logo.png" alt="logo" style="min-height: 20px; max-height: 50px">
+                <img src="../../assets/img/logo.png" alt="logo" style="min-height: 20px; max-height: 50px">
             </div>
         </nav>
     </div>
