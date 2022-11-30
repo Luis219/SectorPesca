@@ -13,7 +13,7 @@ include_once '../../controladores/barco/barcoActualizar.php';
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Styles -->
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -52,8 +52,8 @@ include_once '../../controladores/barco/barcoActualizar.php';
                             <input type="text" value="<?php echo $cursor['tonelaje']; ?>" class="form-control" id="tonelaje" name="txtTonelaje" aria-describedby="address">
                         </div>
                         <div class="d-grid gap-2 col-6 mx-auto">
-                            <input type="submit" name="submit" class="btn btn-success" value="Update Student" />
-                            <a href="barcoVista.php" class="btn btn-warning">Ver Barcos</a>
+                            <input type="submit" name="submit" class="btn btn-success" value="Actualizar datos del barco" />
+                            <a href="barcoVista.php" class="btn btn-warning">Regresar</a>
                         </div>
                     </form>
                 </div>
