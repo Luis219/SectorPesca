@@ -1,5 +1,7 @@
 <?php
 include_once '../../controladores/pesca/pescaAgregar.php';
+session_start();
+$cursor = $barcos->find();
 
 
 ?>
@@ -41,10 +43,16 @@ include_once '../../controladores/pesca/pescaAgregar.php';
                 <div class="card-body">
                     <form method="POST" class="my-3 mx-3">
 
-                        <div class="mb-3">
+                    <div class="mb-3">
                             <label for="name" class="form-label">Barco</label>
-                            <input type="text" placeholder="ex: Chamara" class="form-control" id="name" name="barco" aria-describedby="name">
+
+                            <select name="barco" id="">
+                                <?php foreach ($cursor as $document) { ?>
+                                    <option value="<?php echo $document['_id']; ?>"><?php echo $document['nombre']; ?></option>
+                                <?php } ?>
+                            </select>
                         </div>
+                        <input type="text" value="<?php echo $_SESSION['id']; ?>" name="usuario">
                         <div class="mb-3">
                             <label for="address" class="form-label">Descripcion</label>
                             <input type="text" placeholder="ex: Kurunegala" class="form-control" id="address" name="descripcion" aria-describedby="address">

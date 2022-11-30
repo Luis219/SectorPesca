@@ -1,3 +1,29 @@
+
+<?php
+  include_once '../clases/conexion.php';
+  if(isset( $_POST['usuario']) &&  isset( $_POST['contrasenia'])){
+    $cursor = $usuarios->findOne(array('user' => $_POST['usuario'],'contraseña' => $_POST['contrasenia'] ));
+    
+if($cursor==TRUE){
+    session_start();
+    $_SESSION['id']=$cursor['_id'];
+    header('location: /sectorpesquero/vistas/barco/barcoVista.php ');
+}else{
+    echo 'usuario no encontrado';
+}
+
+
+  }
+
+
+
+
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -26,7 +52,7 @@
             <center>
                 <div class="middle">
                     <div id="login">
-                        <form action="accesoUsuarios.php" method="POST">
+                        <form  method="POST">
                             <fieldset class="clearfix">
                                 <p><span class="fa fa-user"></span><input type="text" name="usuario" Placeholder="Username" required></p>
                                 <!-- JS because of IE support; better: placeholder="Username" -->
