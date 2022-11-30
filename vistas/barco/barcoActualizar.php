@@ -52,8 +52,8 @@ include_once '../../controladores/barco/barcoActualizar.php';
                             <input type="text" value="<?php echo $cursor['tonelaje']; ?>" class="form-control" id="tonelaje" name="txtTonelaje" aria-describedby="address">
                         </div>
                         <div class="d-grid gap-2 col-6 mx-auto">
-                            <input type="submit" name="submit" class="btn btn-success" value="Update Student" />
-                            <a href="barcoVista.php" class="btn btn-warning">Ver Barcos</a>
+                            <input type="submit" name="submit" class="btn btn-success" value="Actualizar datos del barco" />
+                            <a href="barcoVista.php" class="btn btn-warning">Regresar</a>
                         </div>
                     </form>
                 </div>

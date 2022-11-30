@@ -2,6 +2,7 @@
 include_once '../../clases/conexion.php';
 
 $cursor = $tripulante->find();
+$id="";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,16 +55,17 @@ $cursor = $tripulante->find();
                                     <th scope="row"><?php echo $document['_id']; ?></th>
                                     <td><?php echo $document['nombres']; ?></td>
                                     <td><?php $id = $document['barco_id'];
-                                        $cursor2 = $barcos->findOne(["_id" => ($id)]);
+                                  
+                                        $cursor2 = $barcos->findOne(["_id" => new MongoDB\BSON\ObjectId($id)]);
                                         echo $cursor2['nombre']; ?></td>
-                                    }
+                                    
 
                                     <td><?php echo $document['cedula']; ?></td>
                                     <td><?php echo $document['correo']; ?></td>
                                     <!-- Delete Button -->
                                     <td style="text-align:right">
-                                        <a href="pescaEliminar.php?id=<?php echo $document['_id']; ?>" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                        <a href="pescaActualizar.php?id=<?php echo $document['_id']; ?>" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        <a href="../../controladores/tripulante/tripulanteEliminar?id=<?php echo $document['_id']; ?>" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                        <a href="tripulanteActualizar.php?id=<?php echo $document['_id']; ?>" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                     </td>
                                 </tr>
                             <?php } ?>

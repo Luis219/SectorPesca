@@ -54,8 +54,8 @@ include_once '../../controladores/barco/barcoAgregar.php';
                             <input type="number" placeholder="ex: 761234568" class="form-control" id="contact" name="txtTonelaje" aria-describedby="address">
                         </div>
                         <div class="d-grid gap-2 col-6 mx-auto">
-                            <input type="submit" name="submit" class="btn btn-primary" value="Insert Student" />
-                            <a href="barcoVista.php" class="btn btn-warning">View Students</a>
+                            <input type="submit" name="submit" class="btn btn-primary" value="Agregar" />
+                            <a href="barcoVista.php" class="btn btn-warning">Cancelar</a>
                         </div>
                     </form>
                 </div>

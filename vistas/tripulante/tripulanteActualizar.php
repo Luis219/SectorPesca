@@ -70,7 +70,7 @@ $cursorb = $barcos->find();
                         </div>
                         <div class="d-grid gap-2 col-6 mx-auto">
                             <input type="submit" name="submit" class="btn btn-success" value="Actualizar" />
-                            <a href="pescaInicio.php" class="btn btn-warning">Refresar</a>
+                            <a href="trupulanteInicio.php" class="btn btn-warning">Regresar</a>
                         </div>
                     </form>
                 </div>

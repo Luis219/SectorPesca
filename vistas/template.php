@@ -5,13 +5,13 @@
             <!-- Links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">INICIO</a>
+                    <a class="nav-link" href="/sectorpesquero/vistas/pesca/pescaInicio.php">PESCA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">TRIPULACIÓN</a>
+                    <a class="nav-link" href="/sectorpesquero/vistas/tripulante/trupulanteInicio.php">TRIPULACIÓN</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">BARCOS</a>
+                    <a class="nav-link" href="/sectorpesquero/vistas/barco/barcoVista.php">BARCOS</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">LINK</a>

@@ -54,8 +54,8 @@ include_once '../../controladores/pesca/pescaActualizar.php';
                             <input type="text" value="<?php echo $cursor['horarioSalida']; ?>" class="form-control" id="tonelaje" name="horarioSalida" aria-describedby="address">
                         </div>
                         <div class="d-grid gap-2 col-6 mx-auto">
-                            <input type="submit" name="submit" class="btn btn-success" value="Update Student" />
-                            <a href="pescaInicio.php" class="btn btn-warning">Ver Viaje de Pesca</a>
+                            <input type="submit" name="submit" class="btn btn-success" value="Actualizar" />
+                            <a href="pescaInicio.php" class="btn btn-warning">Regresar</a>
                         </div>
                     </form>
                 </div>
