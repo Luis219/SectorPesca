@@ -58,9 +58,11 @@ $cursor = $pesca->find();
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($cursor as $document) { ?>
-                                <tr>
-                                    <th scope="row"><?php echo $document['_id']; ?></th>
+                            <?php $cont=0;
+                             foreach ($cursor as $document) { ?>
+                                <tr>  <td><?php echo $cont;
+                                    $cont++; ?></td>
+                                  
                                     <td><?php echo $document['barco_id']; ?></td>
                                     <td><?php echo $document['descripcion']; ?></td>
                                     <td><?php echo $document['horarioSalida']; ?></td>

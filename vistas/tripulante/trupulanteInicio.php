@@ -59,9 +59,12 @@ $id="";
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($cursor as $document) { ?>
+                            <?php  $cont=1;
+                            foreach ($cursor as $document) { ?>
                                 <tr>
-                                    <th scope="row"><?php echo $document['_id']; ?></th>
+                                <td><?php echo $cont;
+                                    $cont++; ?></td>
+                                    
                                     <td><?php echo $document['nombres']; ?></td>
                                     <td><?php $id = $document['barco_id'];
                                   

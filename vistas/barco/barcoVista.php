@@ -71,9 +71,11 @@ $cursor = $barcos->find();
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($cursor as $document) { ?>
+                            <?php $cont=0;
+                            foreach ($cursor as $document) { ?>
                                 <tr>
-                                    <th scope="row"><?php echo $document['_id']; ?></th>
+                                <tr>  <td><?php echo $cont;
+                                    $cont++; ?></td>
                                     <td><?php echo $document['nombre']; ?></td>
                                     <td><?php echo $document['matricula']; ?></td>
                                     <td><?php echo $document['tonelaje']; ?></td>
