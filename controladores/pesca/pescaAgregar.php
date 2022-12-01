@@ -9,7 +9,7 @@
        $post_data['barco_id'] = $_POST['barco']; 
        $post_data['descripcion'] = $_POST['descripcion'];
        $post_data['horarioSalida'] =  ($_POST['horarioSalida']) ;
-       $post_data['descripcion'] = $_POST['descripcion'];
+     
        $post_data['usuario_id'] = $_POST['usuario'];
 
        if (($post_data['barco_id']=="")||($post_data['descripcion']=="")||($post_data['horarioSalida']=="")) {
