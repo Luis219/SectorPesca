@@ -58,7 +58,7 @@ $cursor = $pesca->find();
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $cont=0;
+                            <?php $cont=1;
                              foreach ($cursor as $document) { ?>
                                 <tr>  <td><?php echo $cont;
                                     $cont++; ?></td>

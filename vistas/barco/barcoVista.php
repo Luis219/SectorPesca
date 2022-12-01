@@ -71,7 +71,7 @@ $cursor = $barcos->find();
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $cont=0;
+                            <?php $cont=1;
                             foreach ($cursor as $document) { ?>
                                 <tr>
                                 <tr>  <td><?php echo $cont;
