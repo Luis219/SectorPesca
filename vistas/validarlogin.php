@@ -1,7 +1,7 @@
 <?php
   include_once '../clases/conexion.php';
   if(isset( $_POST['usuario']) &&  isset( $_POST['contrasenia'])){
-    $cursor = $usuarios->findOne(array('user' => $_POST['usuario'],'contraseña' => $_POST['contrasenia'] ));
+    $cursor = $usuarios->findOne(array('user' => $_POST['usuario'],'contraseña' => $_POST['contrasenia'],'estado' => 1 ));
     $idusuario=$cursor['_id'];
  
 

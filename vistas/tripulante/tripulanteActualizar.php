@@ -65,7 +65,7 @@ $cursorb = $barcos->find();
                         </div>
                         <div class="mb-3">
                             <label for="contact" class="form-label">Correo</label>
-                            <input type="email" value="<?php echo $cursor['correo']; ?>" placeholder="ex: 761234568" class="form-control" id="contact" name="correo" aria-describedby="address">
+                            <input type="email" value="<?php echo $cursor['correo']; ?>"  class="form-control" id="contact" name="correo" aria-describedby="address">
 
                         </div>
                         <div class="d-grid gap-2 col-6 mx-auto">

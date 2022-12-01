@@ -38,13 +38,13 @@ $cursor = $barcos->find();
         </nav>
         <div class="container">
             <div class="card mt-3 mb-2 bg-light">
-                <h4 class="card-title mx-auto mt-4">Zarpado</h4>
+                <h4 class="card-title mx-auto mt-4">Tripulante</h4>
                 <div class="card-body">
                     <form method="POST" class="my-3 mx-3">
 
                         <div class="mb-3">
                             <label for="name" class="form-label">Nombres</label>
-                            <input type="text" placeholder="ex: Chamara" class="form-control" id="name" name="nombres" aria-describedby="name">
+                            <input type="text"  class="form-control" id="name" name="nombres" aria-describedby="name">
                         </div>
                         <div class="mb-3">
                             <label for="name" class="form-label">Barco</label>
@@ -58,11 +58,11 @@ $cursor = $barcos->find();
 
                         <div class="mb-3">
                             <label for="address" class="form-label">Cédula</label>
-                            <input type="text" placeholder="ex: Kurunegala" class="form-control" id="address" name="cedula" aria-describedby="address">
+                            <input type="text"  class="form-control" id="address" name="cedula" aria-describedby="address">
                         </div>
                         <div class="mb-3">
                             <label for="contact" class="form-label">Correo</label>
-                            <input type="email" placeholder="ex: 761234568" class="form-control" id="contact" name="correo" aria-describedby="address">
+                            <input type="email"  class="form-control" id="contact" name="correo" aria-describedby="address">
 
                         </div>
                         <div class="d-grid gap-2 col-6 mx-auto">

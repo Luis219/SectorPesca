@@ -43,15 +43,15 @@ include_once '../../controladores/barco/barcoAgregar.php';
 
                         <div class="mb-3">
                             <label for="name" class="form-label">Nombre</label>
-                            <input type="text" placeholder="ex: Chamara" class="form-control" id="name" name="txtNombre" aria-describedby="name">
+                            <input type="text" class="form-control" id="name" name="txtNombre" aria-describedby="name">
                         </div>
                         <div class="mb-3">
                             <label for="address" class="form-label">Matricula</label>
-                            <input type="text" placeholder="ex: Kurunegala" class="form-control" id="address" name="txtMatricula" aria-describedby="address">
+                            <input type="text"  class="form-control" id="address" name="txtMatricula" aria-describedby="address">
                         </div>
                         <div class="mb-3">
                             <label for="contact" class="form-label">Tonelaje</label>
-                            <input type="number" placeholder="ex: 761234568" class="form-control" id="contact" name="txtTonelaje" aria-describedby="address">
+                            <input type="number"  class="form-control" id="contact" name="txtTonelaje" aria-describedby="address">
                         </div>
                         <div class="d-grid gap-2 col-6 mx-auto">
                             <input type="submit" name="submit" class="btn btn-primary" value="Agregar" />

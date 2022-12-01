@@ -52,14 +52,14 @@ $cursor = $barcos->find();
                                 <?php } ?>
                             </select>
                         </div>
-                        <input type="text" value="<?php echo $_SESSION['id']; ?>" name="usuario">
+                        <input type="text" value="<?php echo $_SESSION['id']; ?>" name="usuario" hidden>
                         <div class="mb-3">
                             <label for="address" class="form-label">Descripcion</label>
-                            <input type="text" placeholder="ex: Kurunegala" class="form-control" id="address" name="descripcion" aria-describedby="address">
+                            <input type="text"  class="form-control" id="address" name="descripcion" aria-describedby="address">
                         </div>
                         <div class="mb-3">
                             <label for="contact" class="form-label">Horario Salida</label>
-                            <input type="datetime-local" placeholder="ex: 761234568" class="form-control" id="contact" name="horarioSalida" aria-describedby="address">
+                            <input type="datetime-local"   class="form-control" id="contact" name="horarioSalida" aria-describedby="address">
 
                         </div>
                         <div class="d-grid gap-2 col-6 mx-auto">

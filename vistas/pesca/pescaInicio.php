@@ -52,7 +52,7 @@ $cursor = $pesca->find();
                                 <th scope="col">Id</th>
                                 <th scope="col">Barco</th>
                                 <th scope="col">descripcion</th>
-                                <th scope="col">Hoario de salida</th>
+                                <th scope="col">Horario de salida</th>
                                 <th> <a id="btn" href="pescaAgregar.php" class="btn btn-secondary" ><i class="fa fa-plus"></i></a></th>
                                 <th scope="col" style="text-align:right"></th>
                             </tr>
@@ -65,7 +65,7 @@ $cursor = $pesca->find();
                                   
                                     <td><?php echo $document['barco_id']; ?></td>
                                     <td><?php echo $document['descripcion']; ?></td>
-                                    <td><?php echo $document['horarioSalida']; ?></td>
+                                    <td><?php echo ( $document['horarioSalida']); ?></td>
                                     <!-- Delete Button -->
                                     <td style="text-align:right">
                                     <?php
