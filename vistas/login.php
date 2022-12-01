@@ -1,29 +1,4 @@
 
-<?php
-  include_once '../clases/conexion.php';
-  if(isset( $_POST['usuario']) &&  isset( $_POST['contrasenia'])){
-    $cursor = $usuarios->findOne(array('user' => $_POST['usuario'],'contraseña' => $_POST['contrasenia'] ));
-    
-if($cursor==TRUE){
-    session_start();
-    $_SESSION['id']=$cursor['_id'];
-    header('location: /sectorpesquero/vistas/barco/barcoVista.php ');
-}else{
-    echo 'usuario no encontrado';
-}
-
-
-  }
-
-
-
-
-
-
-?>
-
-
-
 <!DOCTYPE html>
 <html>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -52,14 +27,17 @@ if($cursor==TRUE){
             <center>
                 <div class="middle">
                     <div id="login">
-                        <form  method="POST">
+                        <form method="POST" action="validarlogin.php">
                             <fieldset class="clearfix">
-                                <p><span class="fa fa-user"></span><input type="text" name="usuario" Placeholder="Username" required></p>
+                                <p><span class="fa fa-user"></span><input type="text" name="usuario"
+                                        Placeholder="Username" required></p>
                                 <!-- JS because of IE support; better: placeholder="Username" -->
-                                <p><span class="fa fa-lock"></span><input type="password" name="contrasenia" Placeholder="Password" required></p>
+                                <p><span class="fa fa-lock"></span><input type="password" name="contrasenia"
+                                        Placeholder="Password" required></p>
                                 <!-- JS because of IE support; better: placeholder="Password" -->
                                 <div>
-                                    <span style="width:50%; text-align:right;  display: inline-block;"><input type="submit" value="INGRESAR"></span>
+                                    <span style="width:50%; text-align:right;  display: inline-block;"><input
+                                            type="submit" value="INGRESAR"></span>
                                 </div>
                             </fieldset>
                             <div class="clearfix"></div>

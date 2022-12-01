@@ -16,7 +16,7 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="/sectorpesquero/vistas/login.php">Cerrar Sesión</a>
+                    <a class="nav-link" href="/sectorpesquero/vistas/cerrarsesion.php">Cerrar Sesión</a>
                 </li>
             </ul>
             <div class="navbar-fluid">

@@ -1,7 +1,15 @@
 <?php
 include_once '../../clases/conexion.php';
 
+session_start();
+
+if (!isset($_SESSION['id'])){
+	header("location:/sectorpesquero/vistas/validarlogin.php");
+}
+
+
 $cursor = $barcos->find();
+
 ?>
 
 <!DOCTYPE html>
@@ -31,9 +39,22 @@ $cursor = $barcos->find();
     <!-- Fin barra de navegación -->
 
     <div class="contenidoFormulario">
+   
+   
         <div class="card mt-3 mb-3 bg-light">
+        <p> <?php
+               
+               echo  'Bienvenido '.  $_SESSION['usuario'];
+               
+             
+              
+                ?></p>
             <div class="card-header text-center">
-                <h5>Embarcaciones </h5>
+                
+            <h5>Embarcaciones </h5>
+               
+               
+                
                 
             </div>
             <div class="card-body">
@@ -58,7 +79,13 @@ $cursor = $barcos->find();
                                     <td><?php echo $document['tonelaje']; ?></td>
                                     <!-- Delete Button -->
                                     <td style="text-align:right">
+                                      <?php
+                                      if ($_SESSION['name']=="admin"){
+                                      ?>
                                         <a href="../../controladores/barco/barcoEliminar.php?id=<?php echo $document['_id']; ?>" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                        <?php
+                                      }
+                                        ?>
                                         <a href="barcoActualizar.php?id=<?php echo $document['_id']; ?>" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                     </td>
                                 </tr>
