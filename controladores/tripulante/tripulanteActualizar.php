@@ -12,6 +12,10 @@
         $post_data['nombres'] = $_POST['nombres'];
         $post_data['cedula'] = $_POST['cedula'];
         $post_data['correo'] = $_POST['correo'];
+        $post_data['telefono'] = $_POST['telefono'];
+        $post_data['fecha_nacimiento'] = $_POST['fecha_nacimiento'];
+        $post_data['ciudad'] = $_POST['ciudad'];
+        $post_data['tiposangre'] = $_POST['tiposangre'];
  
         $result = $tripulante->updateOne(['_id'=> new MongoDB\BSON\ObjectId($_GET['id'])],['$set'=>$post_data],['upsert' => true]);
  

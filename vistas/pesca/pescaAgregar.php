@@ -53,14 +53,37 @@ $cursor = $barcos->find();
                             </select>
                         </div>
                         <input type="text" value="<?php echo $_SESSION['id']; ?>" name="usuario" hidden>
-                        <div class="mb-3">
-                            <label for="address" class="form-label">Descripcion</label>
-                            <input type="text"  class="form-control" id="address" name="descripcion" aria-describedby="address">
-                        </div>
+                       
                         <div class="mb-3">
                             <label for="contact" class="form-label">Horario Salida</label>
-                            <input type="datetime-local"   class="form-control" id="contact" name="horarioSalida" aria-describedby="address">
+                            <input type="datetime-local"   class="form-control" id="contact" name="horarioSalida" aria-describedby="address" require>
 
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Millas a recorrer</label>
+                            <input type="number"  class="form-control" id="millas" name="millas" aria-describedby="address" require>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Número de tripulantes</label>
+                            <input type="number"  class="form-control" id="tripulantes" name="ntripulantes" aria-describedby="address" require>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Días de Pesca</label>
+                            <input type="number"  class="form-control" id="dias" name="diaspesca" aria-describedby="address" require>
+                        </div>
+                        <div class="mb-3">
+                        <label for="address" class="form-label">Tipo de pesca</label>
+                        <select name="tipopesca" id="tipo">
+                              
+                                    <option value="Gran Altura">Gran Altura</option>
+                                    <option value="Altura">Altura</option>
+                                    <option value="Bajura">Bajura</option>
+                              
+                            </select>
+                            </div>
+                         <div class="mb-3">
+                            <label for="address" class="form-label">Descripcion</label>
+                            <input type="text"  class="form-control" id="address" name="descripcion" aria-describedby="address" require>
                         </div>
                         <div class="d-grid gap-2 col-6 mx-auto">
                             <input type="submit" name="submit" class="btn btn-primary" value="Insertar" />

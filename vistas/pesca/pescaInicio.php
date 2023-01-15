@@ -54,8 +54,12 @@ $cursor = $pesca->find();
                             <tr>
                                 <th scope="col">Id</th>
                                 <th scope="col">Barco</th>
-                                <th scope="col">descripcion</th>
                                 <th scope="col">Horario de salida</th>
+                                <th scope="col">Millas a recorrer</th>
+                                <th scope="col">Número de Tripulantes</th>
+                                <th scope="col">Días de pesca</th>
+                                <th scope="col">Tipo de pesca</th>
+                                <th scope="col">Descripción</th>
                                 <th> <a id="btn" href="pescaAgregar.php" class="btn btn-secondary"><i
                                             class="fa fa-plus"></i></a></th>
                                 <th scope="col" style="text-align:right"></th>
@@ -74,8 +78,13 @@ $cursor = $pesca->find();
                                   
                                         $cursor2 = $barcos->findOne(["_id" => new MongoDB\BSON\ObjectId($id)]);
                                         echo $cursor2['nombre']; ?></td>
-                                <td><?php echo $document['descripcion']; ?></td>
+                                
                                 <td><?php echo ( $document['horarioSalida']); ?></td>
+                                <td><?php echo ( $document['millas_recorrer']); ?></td>
+                                <td><?php echo ( $document['numero_tripulantes']); ?></td>
+                                <td><?php echo ( $document['dias_pesca']); ?></td>
+                                <td><?php echo ( $document['tipo_pesca']); ?></td>
+                                <td><?php echo $document['descripcion']; ?></td>
                                 <!-- Delete Button -->
                                 <td style="text-align:right">
                                     <?php

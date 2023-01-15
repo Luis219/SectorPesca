@@ -7,8 +7,12 @@
        $post_data = array();
       
        $post_data['barco_id'] = $_POST['barco']; 
+       $post_data['horarioSalida'] =  $_POST['horarioSalida'];
+       $post_data['millas_recorrer'] = $_POST['millas'];
+       $post_data['numero_tripulantes'] = $_POST['ntripulantes'];
+       $post_data['dias_pesca'] = $_POST['diaspesca'];
+       $post_data['tipo_pesca'] = $_POST['tipopesca'];
        $post_data['descripcion'] = $_POST['descripcion'];
-       $post_data['horarioSalida'] =  ($_POST['horarioSalida']) ;
      
        $post_data['usuario_id'] = $_POST['usuario'];
 

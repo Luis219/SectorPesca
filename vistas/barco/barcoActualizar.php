@@ -41,15 +41,27 @@ include_once '../../controladores/barco/barcoActualizar.php';
 
                         <div class="mb-3">
                             <label for="name" class="form-label">Nombre</label>
-                            <input type="text" value="<?php echo $cursor['nombre']; ?>" class="form-control" id="nombre" name="txtNombre" aria-describedby="name">
+                            <input type="text" value="<?php echo $cursor['nombre']; ?>" class="form-control" id="nombre" name="txtNombre" aria-describedby="name" require >
                         </div>
                         <div class="mb-3">
                             <label for="address" class="form-label">Matrícula</label>
-                            <input type="text" value="<?php echo $cursor['matricula']; ?>" class="form-control" id="matricula" name="txtMatricula" aria-describedby="address">
+                            <input type="text" value="<?php echo $cursor['matricula']; ?>" class="form-control" id="matricula" name="txtMatricula" aria-describedby="address" require >
                         </div>
                         <div class="mb-3">
                             <label for="contact" class="form-label">Tonelaje</label>
-                            <input type="text" value="<?php echo $cursor['tonelaje']; ?>" class="form-control" id="tonelaje" name="txtTonelaje" aria-describedby="address">
+                            <input type="text" value="<?php echo $cursor['tonelaje']; ?>" class="form-control" id="tonelaje" name="txtTonelaje" aria-describedby="address" require >
+                        </div>
+                        <div class="mb-3">
+                            <label for="contact" class="form-label">Año de Construcción</label>
+                            <input type="text" value="<?php echo $cursor['anio_construccion']; ?>" class="form-control" id="tonelaje" name="txtAnio" aria-describedby="address" require require pattern="[0-9]{4}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contact" class="form-label">Color</label>
+                            <input type="text" value="<?php echo $cursor['color']; ?>" class="form-control" id="tonelaje" name="txtColor" aria-describedby="address" require >
+                        </div>
+                        <div class="mb-3">
+                            <label for="contact" class="form-label">Tipo</label>
+                            <input type="text" value="<?php echo $cursor['tipo']; ?>" class="form-control" id="tonelaje" name="txtTipo" aria-describedby="address" require >
                         </div>
                         <div class="d-grid gap-2 col-6 mx-auto">
                             <input type="submit" name="submit" class="btn btn-success" value="Actualizar datos del barco" />

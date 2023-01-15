@@ -54,6 +54,11 @@ $id="";
                                 <th scope="col">Barco</th>
                                 <th scope="col">Cédula</th>
                                 <th scope="col">Correo</th>
+                                <th scope="col">Teléfono</th>
+                                <th scope="col">Fecha de Nacimiento</th>
+                                <th scope="col">Ciudad</th>
+                                <th scope="col">Tipo de Sangre</th>
+
                                 <th> <a id="btn" href="tripulanteAgregar.php" class="btn btn-secondary" ><i class="fa fa-plus"></i></a></th>
                                 <th scope="col" style="text-align:right"></th>
                             </tr>
@@ -74,6 +79,11 @@ $id="";
 
                                     <td><?php echo $document['cedula']; ?></td>
                                     <td><?php echo $document['correo']; ?></td>
+                                    <td><?php echo $document['telefono']; ?></td>
+                                    <td><?php echo $document['fecha_nacimiento']; ?></td>
+                                    <td><?php echo $document['ciudad']; ?></td>
+                                    <td><?php echo $document['tiposangre']; ?></td>
+                                    
                                     <!-- Delete Button -->
                                     <td style="text-align:right">
                                     <?php

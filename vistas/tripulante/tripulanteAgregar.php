@@ -58,12 +58,30 @@ $cursor = $barcos->find();
 
                         <div class="mb-3">
                             <label for="address" class="form-label">Cédula</label>
-                            <input type="text"  class="form-control" id="address" name="cedula" aria-describedby="address">
+                            <input type="text"  class="form-control" id="address" name="cedula" aria-describedby="address" pattern="[0-9]{10}" require>
                         </div>
                         <div class="mb-3">
                             <label for="contact" class="form-label">Correo</label>
-                            <input type="email"  class="form-control" id="contact" name="correo" aria-describedby="address">
+                            <input type="email"  class="form-control" id="contact" name="correo" aria-describedby="address" require>
 
+                        </div>
+                        <div class="mb-3">
+                            <label for="contact" class="form-label">Teléfono</label>
+                            <input type="tel"  class="form-control" id="contact" name="telefono" aria-describedby="address" require  pattern="[0-9]{10}" require>
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="contact" class="form-label">Fecha de Nacimiento</label>
+                            <input type="date"   class="form-control" id="contact" name="fecha_nacimiento" aria-describedby="address">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Ciudad</label>
+                            <input type="text"  class="form-control" id="address" name="ciudad" aria-describedby="address" require>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Tipo de Sangre</label>
+                            <input type="text"  class="form-control" id="address" name="tiposangre" aria-describedby="address" require>
                         </div>
                         <div class="d-grid gap-2 col-6 mx-auto">
                             <input type="submit" name="submit" class="btn btn-primary" value="Insertar" />

@@ -66,6 +66,9 @@ $cursor = $barcos->find();
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Matricula</th>
                                 <th scope="col">Tonelaje</th>
+                                <th scope="col">Año de Construcción</th>
+                                <th scope="col">Color</th>
+                                <th scope="col">Tipo</th>
                                 <th> <a id="btn" href="barcoAgregar.php" class="btn btn-secondary" ><i class="fa fa-plus fa-long" ></i></a></th>
                                 <th scope="col" style="text-align:right"></th>
                             </tr>
@@ -79,6 +82,9 @@ $cursor = $barcos->find();
                                     <td><?php echo $document['nombre']; ?></td>
                                     <td><?php echo $document['matricula']; ?></td>
                                     <td><?php echo $document['tonelaje']; ?></td>
+                                    <td><?php echo $document['anio_construccion']; ?></td>
+                                    <td><?php echo $document['color']; ?></td>
+                                    <td><?php echo $document['tipo']; ?></td>
                                     <!-- Delete Button -->
                                     <td style="text-align:right">
                                       <?php

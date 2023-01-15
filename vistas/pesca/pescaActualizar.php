@@ -42,16 +42,39 @@ include_once '../../controladores/pesca/pescaActualizar.php';
                     <form method="POST" class="my-3 mx-3">
 
                         <div class="mb-3">
-                            <label for="name" class="form-label">Barco</label>
+                            <label for="nombre" class="form-label">Barco</label>
                             <input type="text" value="<?php echo $cursor['barco_id']; ?>" class="form-control" id="nombre" name="barco" aria-describedby="name">
+                        </div>
+                       
+                        <div class="mb-3">
+                            <label for="horario" class="form-label">Horario Salida</label>
+                            <input type="text" value="<?php echo $cursor['horarioSalida']; ?>" class="form-control" id="horario" name="horarioSalida" aria-describedby="address">
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Millas a recorrer</label>
+                            <input type="number" value="<?php echo $cursor['millas_recorrer']; ?>"  class="form-control" id="address" name="millas" aria-describedby="address" require>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Número de tripulantes</label>
+                            <input type="number" value="<?php echo $cursor['numero_tripulantes']; ?>"  class="form-control" id="address" name="ntripulantes" aria-describedby="address" require>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Días de Pesca</label>
+                            <input type="number" value="<?php echo $cursor['dias_pesca']; ?>"  class="form-control" id="address" name="diaspesca" aria-describedby="address" require>
+                        </div>
+                        <div class="mb-3">
+                        <label for="address" class="form-label">Tipo de pesca</label>
+                        <select name="tipopesca" id="">
+                              
+                                    <option value="Gran Altura">Gran Altura</option>
+                                    <option value="Altura">Altura</option>
+                                    <option value="Bajura">Bajura</option>
+                              
+                            </select>
                         </div>
                         <div class="mb-3">
                             <label for="address" class="form-label">Descripción</label>
-                            <input type="text" value="<?php echo $cursor['descripcion']; ?>" class="form-control" id="matricula" name="descripcion" aria-describedby="address">
-                        </div>
-                        <div class="mb-3">
-                            <label for="contact" class="form-label">Horario Salida</label>
-                            <input type="text" value="<?php echo $cursor['horarioSalida']; ?>" class="form-control" id="tonelaje" name="horarioSalida" aria-describedby="address">
+                            <input type="text" value="<?php echo $cursor['descripcion']; ?>" class="form-control" id="desc" name="descripcion" aria-describedby="address">
                         </div>
                         <div class="d-grid gap-2 col-6 mx-auto">
                             <input type="submit" name="submit" class="btn btn-success" value="Actualizar" />
