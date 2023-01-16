@@ -1,12 +1,14 @@
 <?php
 include_once '../../clases/conexion.php';
+
 session_start();
-if (!isset($_SESSION['id'])){
-	header("location:/sectorpesquero/vistas/validarlogin.php");
+
+if (!isset($_SESSION['id'])) {
+    header("location:/sectorpesquero/vistas/validarlogin.php");
 }
 
 $cursor = $tripulante->find();
-$id="";
+$id = "";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,76 +35,82 @@ $id="";
     ?>
     <!-- Fin barra de navegación -->
 
-    <div class="contenidoFormulario">
+    <div class="tablaContenidos">
 
-        <div class="card mt-3 mb-3 bg-light">
-        <p> <?php
-               
-               echo  'Bienvenido '.  $_SESSION['usuario'];
-              
-                ?></p>
-            <div class="card-header text-center">
-                <h5>Tripulación </h5>
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-hover mt-0">
-                        <thead class="table-primary">
+        <h3>TRIPULACIÓN</h3>
+        <h5>
+            <?php
+            echo  'Bienvenido ' .  $_SESSION['usuario'];
+            ?></h5>
+
+        <!-- Tabla principal-->
+        <div class="tablaPrincipal">
+            <div clas="table-responsive">
+                <table class="table table-hover table-bordered table-primary">
+                    <thead style="font-size: 11pt">
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nombres</th>
+                            <th scope="col">Barco</th>
+                            <th scope="col">Cédula</th>
+                            <th scope="col">Correo</th>
+                            <th scope="col">Teléfono</th>
+                            <th scope="col">Fecha de Nacimiento</th>
+                            <th scope="col">Ciudad</th>
+                            <th scope="col">Tipo de Sangre</th>
+
+                            <th> <a id="btn" href="tripulanteAgregar.php" class="btn btn-secondary"><i class="fa fa-plus"></i></a></th>
+                            <th scope="col" style="text-align:right"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php $cont = 1;
+                        foreach ($cursor as $document) { ?>
                             <tr>
-                                <th scope="col">Id</th>
-                                <th scope="col">Nombres</th>
-                                <th scope="col">Barco</th>
-                                <th scope="col">Cédula</th>
-                                <th scope="col">Correo</th>
-                                <th scope="col">Teléfono</th>
-                                <th scope="col">Fecha de Nacimiento</th>
-                                <th scope="col">Ciudad</th>
-                                <th scope="col">Tipo de Sangre</th>
-
-                                <th> <a id="btn" href="tripulanteAgregar.php" class="btn btn-secondary" ><i class="fa fa-plus"></i></a></th>
-                                <th scope="col" style="text-align:right"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php  $cont=1;
-                            foreach ($cursor as $document) { ?>
-                                <tr>
                                 <td><?php echo $cont;
                                     $cont++; ?></td>
-                                    
-                                    <td><?php echo $document['nombres']; ?></td>
-                                    <td><?php $id = $document['barco_id'];
-                                  
-                                        $cursor2 = $barcos->findOne(["_id" => new MongoDB\BSON\ObjectId($id)]);
-                                        echo $cursor2['nombre']; ?></td>
-                                    
 
-                                    <td><?php echo $document['cedula']; ?></td>
-                                    <td><?php echo $document['correo']; ?></td>
-                                    <td><?php echo $document['telefono']; ?></td>
-                                    <td><?php echo $document['fecha_nacimiento']; ?></td>
-                                    <td><?php echo $document['ciudad']; ?></td>
-                                    <td><?php echo $document['tiposangre']; ?></td>
-                                    
-                                    <!-- Delete Button -->
-                                    <td style="text-align:right">
+                                <td><?php echo $document['nombres']; ?></td>
+                                <td><?php $id = $document['barco_id'];
+
+                                    $cursor2 = $barcos->findOne(["_id" => new MongoDB\BSON\ObjectId($id)]);
+                                    echo $cursor2['nombre']; ?></td>
+
+
+                                <td><?php echo $document['cedula']; ?></td>
+                                <td><?php echo $document['correo']; ?></td>
+                                <td><?php echo $document['telefono']; ?></td>
+                                <td><?php echo $document['fecha_nacimiento']; ?></td>
+                                <td><?php echo $document['ciudad']; ?></td>
+                                <td><?php echo $document['tiposangre']; ?></td>
+
+                                <!-- Delete Button -->
+                                <td style="text-align:right">
                                     <?php
-                                      if ($_SESSION['name']=="admin"){
-                                      ?>
+                                    if ($_SESSION['name'] == "admin") {
+                                    ?>
                                         <a href="../../controladores/tripulante/tripulanteEliminar.php?id=<?php echo $document['_id']; ?>" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                        <?php
-                                      }
-                                        ?>
-                                        <a href="tripulanteActualizar.php?id=<?php echo $document['_id']; ?>" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                    </td>
-                                </tr>
-                            <?php } ?>
-                        </tbody>
-                    </table>
-                </div>
+                                    <?php
+                                    }
+                                    ?>
+                                    <a href="tripulanteActualizar.php?id=<?php echo $document['_id']; ?>" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
             </div>
         </div>
+        <!-- Fin Tabla principal-->
+
+        <!-- Tabla oculta-->
+
+
+
+        <!-- Tabla oculta-->
+
     </div>
+
 </body>
 
 </html>

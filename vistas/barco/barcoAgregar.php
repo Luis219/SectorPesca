@@ -1,7 +1,5 @@
 <?php
 include_once '../../controladores/barco/barcoAgregar.php';
-
-
 ?>
 
 <!DOCTYPE html>
@@ -29,51 +27,45 @@ include_once '../../controladores/barco/barcoAgregar.php';
     ?>
     <!-- Fin barra de navegación -->
 
-    <div class="contenidoFormulario">
-        <nav class="navbar navbar-dark bg-primary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Empresa de Pesca</a>
-            </div>
-        </nav>
-        <div class="container">
-            <div class="card mt-3 mb-2 bg-light">
-                <h4 class="card-title mx-auto mt-4">Nueva Embarcación</h4>
-                <div class="card-body">
-                    <form method="POST" class="my-3 mx-3">
+    <div class="tablaContenidos">
 
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="name" name="txtNombre" aria-describedby="name" require>
-                        </div>
-                        <div class="mb-3">
-                            <label for="address" class="form-label">Matricula</label>
-                            <input type="text"  class="form-control" id="address" name="txtMatricula" aria-describedby="address" require >
-                        </div>
-                        <div class="mb-3">
-                            <label for="contact" class="form-label">Tonelaje</label>
-                            <input type="number"  class="form-control" id="contact" name="txtTonelaje" aria-describedby="address" require>
-                        </div>
-                        <div class="mb-3">
-                            <label for="contact" class="form-label">Año de Construcción</label>
-                            <input type="number"  class="form-control" id="contact" name="txtAnio" aria-describedby="address" require pattern="[0-9]{4}">
-                        </div>
-                        <div class="mb-3">
-                            <label for="address" class="form-label">Color</label>
-                            <input type="text"  class="form-control" id="address" name="txtColor" aria-describedby="address" require >
-                        </div>
-                        <div class="mb-3">
-                            <label for="address" class="form-label">Tipo Embarcación</label>
-                            <input type="text"  class="form-control" id="address" name="txtTipo" aria-describedby="address" require >
-                        </div>
-                        <div class="d-grid gap-2 col-6 mx-auto">
-                            <input type="submit" name="submit" class="btn btn-primary" value="Agregar" />
-                            <a href="barcoVista.php" class="btn btn-warning">Atrás</a>
-                        </div>
-                        
-                    </form>
+        <h3>AGREGAR NUEVA EMBARCACIÓN</h3>
+        <h5><a href="barcoVista.php" class="btn btn-outline-light">Regresar</a></h5>
+
+        <!-- Formulario principal-->
+        <div class="formActualizarAgregar">
+            <form method="POST" class="my-3 mx-3">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" name="txtNombre" aria-describedby="name" require>
                 </div>
-            </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Matricula</label>
+                    <input type="text" class="form-control" id="address" name="txtMatricula" aria-describedby="address" require>
+                </div>
+                <div class="mb-3">
+                    <label for="contact" class="form-label">Tonelaje</label>
+                    <input type="number" class="form-control" id="contact" name="txtTonelaje" aria-describedby="address" require>
+                </div>
+                <div class="mb-3">
+                    <label for="contact" class="form-label">Año de Construcción</label>
+                    <input type="number" class="form-control" id="contact" name="txtAnio" aria-describedby="address" require pattern="[0-9]{4}">
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Color</label>
+                    <input type="text" class="form-control" id="address" name="txtColor" aria-describedby="address" require>
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Tipo Embarcación</label>
+                    <input type="text" class="form-control" id="address" name="txtTipo" aria-describedby="address" require>
+                </div>
+                <div style="text-align: center;">
+                    <input type="submit" name="submit" class="btn btn-success" value="Agregar" />
+                    <a href="barcoVista.php" class="btn btn-danger">Cancelar</a>
+                </div>
+            </form>
         </div>
+        <!-- Fin Formulario principal-->
     </div>
 </body>
 

@@ -3,13 +3,11 @@ include_once '../../clases/conexion.php';
 
 session_start();
 
-if (!isset($_SESSION['id'])){
-	header("location:/sectorpesquero/vistas/validarlogin.php");
+if (!isset($_SESSION['id'])) {
+    header("location:/sectorpesquero/vistas/validarlogin.php");
 }
 
-
 $cursor = $barcos->find();
-
 ?>
 
 <!DOCTYPE html>
@@ -38,72 +36,72 @@ $cursor = $barcos->find();
     ?>
     <!-- Fin barra de navegación -->
 
-    <div class="contenidoFormulario">
-   
-   
-        <div class="card mt-3 mb-3 bg-light">
-        <p> <?php
-               
-               echo  'Bienvenido '.  $_SESSION['usuario'];
-               
-             
-              
-                ?></p>
-            <div class="card-header text-center">
-                
-            <h5>Embarcaciones </h5>
-               
-               
-                
-                
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-hover mt-0">
-                        <thead class="table-primary">
+    <div class="tablaContenidos">
+
+        <h3>EMBARCACIONES</h3>
+        <h5>
+            <?php
+            echo  'Bienvenido ' .  $_SESSION['usuario'];
+            ?></h5>
+
+        <!-- Tabla principal-->
+        <div class="tablaPrincipal">
+            <div clas="table-responsive">
+                <table class="table table-hover table-bordered table-primary">
+                    <thead style="font-size: 11pt">
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Matricula</th>
+                            <th scope="col">Tonelaje</th>
+                            <th scope="col">Año de Construcción</th>
+                            <th scope="col">Color</th>
+                            <th scope="col">Tipo</th>
+                            <th style="text-align:center"> <a id="btn" href="barcoAgregar.php" class="btn btn-secondary"><i class="fa fa-plus fa-long"></i></a></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <?php $cont = 1;
+                        foreach ($cursor as $document) { ?>
                             <tr>
-                                <th scope="col">Id</th>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Matricula</th>
-                                <th scope="col">Tonelaje</th>
-                                <th scope="col">Año de Construcción</th>
-                                <th scope="col">Color</th>
-                                <th scope="col">Tipo</th>
-                                <th> <a id="btn" href="barcoAgregar.php" class="btn btn-secondary" ><i class="fa fa-plus fa-long" ></i></a></th>
-                                <th scope="col" style="text-align:right"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php $cont=1;
-                            foreach ($cursor as $document) { ?>
-                                <tr>
-                                <tr>  <td><?php echo $cont;
+                            <tr>
+                                <td><?php echo $cont;
                                     $cont++; ?></td>
-                                    <td><?php echo $document['nombre']; ?></td>
-                                    <td><?php echo $document['matricula']; ?></td>
-                                    <td><?php echo $document['tonelaje']; ?></td>
-                                    <td><?php echo $document['anio_construccion']; ?></td>
-                                    <td><?php echo $document['color']; ?></td>
-                                    <td><?php echo $document['tipo']; ?></td>
-                                    <!-- Delete Button -->
-                                    <td style="text-align:right">
-                                      <?php
-                                      if ($_SESSION['name']=="admin"){
-                                      ?>
+                                <td><?php echo $document['nombre']; ?></td>
+                                <td><?php echo $document['matricula']; ?></td>
+                                <td><?php echo $document['tonelaje']; ?></td>
+                                <td><?php echo $document['anio_construccion']; ?></td>
+                                <td><?php echo $document['color']; ?></td>
+                                <td><?php echo $document['tipo']; ?></td>
+                                <!-- Delete Button -->
+                                <td style="text-align:right">
+                                    <?php
+                                    if ($_SESSION['name'] == "admin") {
+                                    ?>
                                         <a href="../../controladores/barco/barcoEliminar.php?id=<?php echo $document['_id']; ?>" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                        <?php
-                                      }
-                                        ?>
-                                        <a href="barcoActualizar.php?id=<?php echo $document['_id']; ?>" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                    </td>
-                                </tr>
-                            <?php } ?>
-                        </tbody>
-                    </table>
-                </div>
+                                    <?php
+                                    }
+                                    ?>
+                                    <a href="barcoActualizar.php?id=<?php echo $document['_id']; ?>" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+
+                </table>
             </div>
         </div>
+        <!-- Fin Tabla principal-->
+
+        <!-- Tabla oculta-->
+
+
+
+        <!-- Tabla oculta-->
+
     </div>
+
 </body>
 
 </html>
