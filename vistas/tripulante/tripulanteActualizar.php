@@ -36,8 +36,8 @@ $cursorb = $barcos->find();
         <div class="formActualizarAgregar">
             <form method="POST" class="my-3 mx-3 ">
                 <div class="mb-3">
-                    <label for="name" class="form-label">Barco</label>
-                    <input type="text" value="<?php echo $cursor['barco_id']; ?>" class="form-control" id="nombre" name="barco" aria-describedby="name" hidden>
+                    <label for="address" class="form-label">Nombres</label>
+                    <input type="text" value="<?php echo $cursor['nombres']; ?>" class="form-control" id="matricula" name="nombres" aria-describedby="name" pattern="[a-zA-ZáéíóúÁÉÍÓÚ\s]{2,}" title="El nombre debe contener al menos dos letras" require>
                 </div>
                 <div class="mb-3">
                     <label for="name" class="form-label">Barco</label>
@@ -49,21 +49,17 @@ $cursorb = $barcos->find();
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="address" class="form-label">Nombres</label>
-                    <input type="text" value="<?php echo $cursor['nombres']; ?>" class="form-control" id="matricula" name="nombres" aria-describedby="address">
-                </div>
-                <div class="mb-3">
                     <label for="contact" class="form-label">Cédula</label>
-                    <input type="text" value="<?php echo $cursor['cedula']; ?>" class="form-control" id="tonelaje" name="cedula" aria-describedby="address" pattern="[0-9]{10}">
+                    <input type="text" value="<?php echo $cursor['cedula']; ?>" class="form-control" id="tonelaje" name="cedula" aria-describedby="address" pattern="[\d]{10}" title="La cedula debe contener 10 dígitos" require>
                 </div>
                 <div class="mb-3">
                     <label for="contact" class="form-label">Correo</label>
-                    <input type="email" value="<?php echo $cursor['correo']; ?>" class="form-control" id="contact" name="correo" aria-describedby="address">
+                    <input type="email" value="<?php echo $cursor['correo']; ?>" class="form-control" id="contact" name="correo" aria-describedby="address" require>
 
                 </div>
                 <div class="mb-3">
                     <label for="contact" class="form-label">Teléfono</label>
-                    <input type="tel" value="<?php echo $cursor['telefono']; ?>" class="form-control" id="contact" name="telefono" aria-describedby="address" require pattern="[0-9]{10}" require>
+                    <input type="tel" value="<?php echo $cursor['telefono']; ?>" class="form-control" id="contact" name="telefono" aria-describedby="address" pattern="[0-9]{10}" title="El teléfono debe contener 10 dígitos" require>
 
                 </div>
                 <div class="mb-3">
@@ -73,12 +69,20 @@ $cursorb = $barcos->find();
                 </div>
                 <div class="mb-3">
                     <label for="address" class="form-label">Ciudad</label>
-                    <input type="text" value="<?php echo $cursor['ciudad']; ?>" class="form-control" id="address" name="ciudad" aria-describedby="address" require>
+                    <input type="text" value="<?php echo $cursor['ciudad']; ?>" class="form-control" id="address" name="ciudad" aria-describedby="address" pattern="[a-zA-ZáéíóúÁÉÍÓÚ\s]{2,}" title="La ciudad debe contener al menos dos letras" require>
                 </div>
                 <div class="mb-3">
                     <label for="address" class="form-label">Tipo de Sangre</label>
-                    <input type="text" value="<?php echo $cursor['tiposangre']; ?>" class="form-control" id="address" name="tiposangre" aria-describedby="address" require>
+                    <select value="<?php echo $cursor['tipoSangre']; ?>" name="tipoSangre" id="tipo" require>
+                        <option value="ORH+">ORH+</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB">AB</option>
+                    </select>
                 </div>
+
                 <div style="text-align: center;">
                     <input type="submit" name="submit" class="btn btn-success" value="Actualizar" />
                     <a href="trupulanteInicio.php" class="btn btn-danger">Cancelar</a>

@@ -39,7 +39,7 @@ $cursor = $barcos->find();
             <form method="POST" class="my-3 mx-3">
                 <div class="mb-3">
                     <label for="name" class="form-label">Nombres</label>
-                    <input type="text" class="form-control" id="name" name="nombres" aria-describedby="name">
+                    <input type="text" class="form-control" id="name" name="nombres" aria-describedby="name" pattern="[a-zA-ZáéíóúÁÉÍÓÚ\s]{2,}" title="El nombre debe contener al menos dos letras" require>
                 </div>
                 <div class="mb-3">
                     <label for="name" class="form-label">Barco</label>
@@ -52,7 +52,7 @@ $cursor = $barcos->find();
                 </div>
                 <div class="mb-3">
                     <label for="address" class="form-label">Cédula</label>
-                    <input type="text" class="form-control" id="address" name="cedula" aria-describedby="address" pattern="[0-9]{10}" require>
+                    <input type="text" class="form-control" id="address" name="cedula" aria-describedby="address" pattern="[\d]{10}" title="La cedula debe contener 10 dígitos" require>
                 </div>
                 <div class="mb-3">
                     <label for="contact" class="form-label">Correo</label>
@@ -61,7 +61,7 @@ $cursor = $barcos->find();
                 </div>
                 <div class="mb-3">
                     <label for="contact" class="form-label">Teléfono</label>
-                    <input type="tel" class="form-control" id="contact" name="telefono" aria-describedby="address" require pattern="[0-9]{10}" require>
+                    <input type="tel" class="form-control" id="contact" name="telefono" aria-describedby="address" pattern="[0-9]{10}" title="El teléfono debe contener 10 dígitos" require>
                 </div>
                 <div class="mb-3">
                     <label for="contact" class="form-label">Fecha de Nacimiento</label>
@@ -69,11 +69,18 @@ $cursor = $barcos->find();
                 </div>
                 <div class="mb-3">
                     <label for="address" class="form-label">Ciudad</label>
-                    <input type="text" class="form-control" id="address" name="ciudad" aria-describedby="address" require>
+                    <input type="text" class="form-control" id="address" name="ciudad" aria-describedby="address" pattern="[a-zA-ZáéíóúÁÉÍÓÚ\s]{2,}" title="La ciudad debe contener al menos dos letras" require>
                 </div>
                 <div class="mb-3">
                     <label for="address" class="form-label">Tipo de Sangre</label>
-                    <input type="text" class="form-control" id="address" name="tiposangre" aria-describedby="address" require>
+                    <select name="tipoSangre" id="tipo" require>
+                        <option value="ORH+">ORH+</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB">AB</option>
+                    </select>
                 </div>
                 <div style="text-align: center;">
                     <input type="submit" name="submit" class="btn btn-success" value="Agregar" />

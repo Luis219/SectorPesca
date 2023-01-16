@@ -57,8 +57,7 @@ $cursor = $pesca->find();
                             <th scope="col">Días de pesca</th>
                             <th scope="col">Tipo de pesca</th>
                             <th scope="col">Descripción</th>
-                            <th> <a id="btn" href="pescaAgregar.php" class="btn btn-secondary"><i class="fa fa-plus"></i></a></th>
-                            <th scope="col" style="text-align:right"></th>
+                            <th style="text-align:center"> <a id="btn" href="pescaAgregar.php" class="btn btn-secondary"><i class="fa fa-plus"></i></a></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -82,7 +81,7 @@ $cursor = $pesca->find();
                                 <td><?php echo ($document['tipo_pesca']); ?></td>
                                 <td><?php echo $document['descripcion']; ?></td>
                                 <!-- Delete Button -->
-                                <td style="text-align:right">
+                                <td style="text-align:center">
                                     <?php
                                     if ($_SESSION['name'] == "admin") {
                                     ?>

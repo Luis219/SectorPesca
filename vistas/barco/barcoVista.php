@@ -75,7 +75,7 @@ $cursor = $barcos->find();
                                 <td><?php echo $document['color']; ?></td>
                                 <td><?php echo $document['tipo']; ?></td>
                                 <!-- Delete Button -->
-                                <td style="text-align:right">
+                                <td style="text-align:center">
                                     <?php
                                     if ($_SESSION['name'] == "admin") {
                                     ?>

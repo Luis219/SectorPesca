@@ -59,8 +59,7 @@ $id = "";
                             <th scope="col">Ciudad</th>
                             <th scope="col">Tipo de Sangre</th>
 
-                            <th> <a id="btn" href="tripulanteAgregar.php" class="btn btn-secondary"><i class="fa fa-plus"></i></a></th>
-                            <th scope="col" style="text-align:right"></th>
+                            <th style="text-align:center"> <a id="btn" href="tripulanteAgregar.php" class="btn btn-secondary"><i class="fa fa-plus"></i></a></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -75,17 +74,15 @@ $id = "";
 
                                     $cursor2 = $barcos->findOne(["_id" => new MongoDB\BSON\ObjectId($id)]);
                                     echo $cursor2['nombre']; ?></td>
-
-
                                 <td><?php echo $document['cedula']; ?></td>
                                 <td><?php echo $document['correo']; ?></td>
                                 <td><?php echo $document['telefono']; ?></td>
                                 <td><?php echo $document['fecha_nacimiento']; ?></td>
                                 <td><?php echo $document['ciudad']; ?></td>
-                                <td><?php echo $document['tiposangre']; ?></td>
+                                <td><?php echo $document['tipo_sangre']; ?></td>
 
                                 <!-- Delete Button -->
-                                <td style="text-align:right">
+                                <td style="text-align:center">
                                     <?php
                                     if ($_SESSION['name'] == "admin") {
                                     ?>

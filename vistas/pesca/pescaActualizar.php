@@ -38,16 +38,16 @@ include_once '../../controladores/pesca/pescaActualizar.php';
 
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Barco</label>
-                    <input type="text" value="<?php echo $cursor['barco_id']; ?>" class="form-control" id="nombre" name="barco" aria-describedby="name">
+                    <input type="text" value="<?php echo $cursor2['nombre']; ?>" class="form-control" id="nombre" name="barco" aria-describedby="name">
                 </div>
 
                 <div class="mb-3">
                     <label for="horario" class="form-label">Horario Salida</label>
-                    <input type="text" value="<?php echo $cursor['horarioSalida']; ?>" class="form-control" id="horario" name="horarioSalida" aria-describedby="address">
+                    <input type="datetime-local" value="<?php echo $cursor['horarioSalida']; ?>" class="form-control" id="horario" name="horarioSalida" aria-describedby="address">
                 </div>
                 <div class="mb-3">
                     <label for="address" class="form-label">Millas a recorrer</label>
-                    <input type="number" value="<?php echo $cursor['millas_recorrer']; ?>" class="form-control" id="address" name="millas" aria-describedby="address" require>
+                    <input type="text" value="<?php echo $cursor['millas_recorrer']; ?>" class="form-control" id="address" name="millas" aria-describedby="address" pattern="[\d]{1,5}" title="Ingrese de uno a cinco dígitos" require>
                 </div>
                 <div class="mb-3">
                     <label for="address" class="form-label">Número de tripulantes</label>
@@ -59,17 +59,15 @@ include_once '../../controladores/pesca/pescaActualizar.php';
                 </div>
                 <div class="mb-3">
                     <label for="address" class="form-label">Tipo de pesca</label>
-                    <select name="tipopesca" id="">
-
+                    <select name="tipoPesca" id="tipo">
                         <option value="Gran Altura">Gran Altura</option>
                         <option value="Altura">Altura</option>
                         <option value="Bajura">Bajura</option>
-
                     </select>
                 </div>
                 <div class="mb-3">
                     <label for="address" class="form-label">Descripción</label>
-                    <input type="text" value="<?php echo $cursor['descripcion']; ?>" class="form-control" id="desc" name="descripcion" aria-describedby="address">
+                    <input type="text" value="<?php echo $cursor['descripcion']; ?>" class="form-control" id="desc" name="descripcion" aria-describedby="address" pattern="[a-zA-Z0-9\s]{2,}" title="Ingrese una descripción" require>
                 </div>
                 <div style="text-align: center;">
                     <input type="submit" name="submit" class="btn btn-success" value="Actualizar" />

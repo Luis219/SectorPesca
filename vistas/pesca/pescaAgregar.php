@@ -39,8 +39,7 @@ $cursor = $barcos->find();
             <form method="POST" class="my-3 mx-3">
 
                 <div class="mb-3">
-                    <label for="name" class="form-label">Barco</label>
-
+                    <label for="name" class="form-label">Nombre del Barco</label>
                     <select name="barco" id="">
                         <?php foreach ($cursor as $document) { ?>
                             <option value="<?php echo $document['_id']; ?>"><?php echo $document['nombre']; ?></option>
@@ -56,7 +55,7 @@ $cursor = $barcos->find();
                 </div>
                 <div class="mb-3">
                     <label for="address" class="form-label">Millas a recorrer</label>
-                    <input type="number" class="form-control" id="millas" name="millas" aria-describedby="address" require>
+                    <input type="text" class="form-control" id="millas" name="millas" aria-describedby="address" pattern="[\d]{1,5}" title="Ingrese de uno a cinco dígitos" require>
                 </div>
                 <div class="mb-3">
                     <label for="address" class="form-label">Número de tripulantes</label>
@@ -68,17 +67,15 @@ $cursor = $barcos->find();
                 </div>
                 <div class="mb-3">
                     <label for="address" class="form-label">Tipo de pesca</label>
-                    <select name="tipopesca" id="tipo">
-
+                    <select name="tipoPesca" id="tipo">
                         <option value="Gran Altura">Gran Altura</option>
                         <option value="Altura">Altura</option>
                         <option value="Bajura">Bajura</option>
-
                     </select>
                 </div>
                 <div class="mb-3">
                     <label for="address" class="form-label">Descripcion</label>
-                    <input type="text" class="form-control" id="address" name="descripcion" aria-describedby="address" require>
+                    <input type="text" class="form-control" id="address" name="descripcion" aria-describedby="address" pattern="[a-zA-Z0-9\s]{2,}" title="Ingrese una descripción" require>
                 </div>
                 <div style="text-align: center;">
                     <input type="submit" name="submit" class="btn btn-success" value="Agregar" />

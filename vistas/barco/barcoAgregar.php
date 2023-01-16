@@ -36,28 +36,32 @@ include_once '../../controladores/barco/barcoAgregar.php';
         <div class="formActualizarAgregar">
             <form method="POST" class="my-3 mx-3">
                 <div class="mb-3">
-                    <label for="name" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="name" name="txtNombre" aria-describedby="name" require>
+                    <label for="name" class="form-label">Nombre del barco</label>
+                    <input type="text" class="form-control" id="name" name="txtNombre" aria-describedby="name" pattern="[a-zA-ZáéíóúÁÉÍÓÚ\s]{2,}" title="El nombre debe contener al menos dos letras" require>
                 </div>
                 <div class="mb-3">
                     <label for="address" class="form-label">Matricula</label>
-                    <input type="text" class="form-control" id="address" name="txtMatricula" aria-describedby="address" require>
+                    <input type="text" class="form-control" id="address" name="txtMatricula" aria-describedby="address" placeholder="1-AB-123" title="La matricula debe tener el siguiente formato: 1-AB-123" require>
                 </div>
                 <div class="mb-3">
                     <label for="contact" class="form-label">Tonelaje</label>
-                    <input type="number" class="form-control" id="contact" name="txtTonelaje" aria-describedby="address" require>
+                    <input type="text" class="form-control" id="contact" name="txtTonelaje" aria-describedby="address" pattern="[\d]{1,5}" title="Ingrese de uno a cinco dígitos" require>
                 </div>
                 <div class="mb-3">
-                    <label for="contact" class="form-label">Año de Construcción</label>
-                    <input type="number" class="form-control" id="contact" name="txtAnio" aria-describedby="address" require pattern="[0-9]{4}">
+                    <label for="contact" class="form-label">Fecha de Construcción</label>
+                    <input type="month" min="1990-01" max="2023-01" class="form-control" id="contact" name="txtAnio" aria-describedby="address"  title="Ingrese el mes y año de fabricación" require>
                 </div>
                 <div class="mb-3">
                     <label for="address" class="form-label">Color</label>
-                    <input type="text" class="form-control" id="address" name="txtColor" aria-describedby="address" require>
+                    <input type="text" class="form-control" id="address" name="txtColor" aria-describedby="address" pattern="[a-zA-ZáéíóúÁÉÍÓÚ\s]{3,}" title="El color debe contener al menos tres letras" require>
                 </div>
                 <div class="mb-3">
-                    <label for="address" class="form-label">Tipo Embarcación</label>
-                    <input type="text" class="form-control" id="address" name="txtTipo" aria-describedby="address" require>
+                    <label for="address" class="form-label">Tipo de embarcación</label>
+                    <select name="txtTipo" id="tipo" require>
+                        <option value="Pesquero">Pesquero</option>
+                        <option value="Transporte">Transporte</option>
+                        <option value="Reconocimiento">Reconocimiento</option>
+                    </select>
                 </div>
                 <div style="text-align: center;">
                     <input type="submit" name="submit" class="btn btn-success" value="Agregar" />

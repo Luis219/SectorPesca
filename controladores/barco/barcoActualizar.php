@@ -11,8 +11,8 @@
         $post_data['matricula'] = $_POST['txtMatricula'];
         $post_data['tonelaje'] = $_POST['txtTonelaje'];
         $post_data['anio_construccion'] = $_POST['txtAnio'];
-       $post_data['Color'] = $_POST['txtColor'];
-       $post_data['Tipo'] = $_POST['txtTipo'];
+       $post_data['color'] = $_POST['txtColor'];
+       $post_data['tipo'] = $_POST['txtTipo'];
  
         $result = $barcos->updateOne(['_id'=> new MongoDB\BSON\ObjectId($_GET['id'])],['$set'=>$post_data],['upsert' => true]);
  
