@@ -6,7 +6,7 @@
     $cursor = $tripulante->findOne(["_id"=>new MongoDB\BSON\ObjectId($id)]);
 
     if (isset($_POST['submit'])) {
-        $post_data = array();
+        $post_data = array();  
         
         $post_data['nombres'] = $_POST['nombres'];
         $post_data['barco_id'] = $_POST['barco']; 
