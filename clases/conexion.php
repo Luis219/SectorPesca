@@ -18,5 +18,6 @@
   $tripulante =$dbSectorPesquero->tripulante;
   $roles= $dbSectorPesquero->roles;
   $usuariosRoles=$dbSectorPesquero->usuariosRoles;
+  $clima=$dbSectorPesquero->clima;
   ?>
 

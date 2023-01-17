@@ -58,6 +58,7 @@ $cursor = $pesca->find();
                             <th scope="col">Tipo de pesca</th>
                             <th scope="col">Descripción</th>
                             <th style="text-align:center"> <a id="btn" href="pescaAgregar.php" class="btn btn-secondary"><i class="fa fa-plus"></i></a></th>
+                            <th> <a id="btn" href="../etl/info.php" class="btn btn-secondary"><i class="fa fa-info-circle" aria-hidden="true"></i></a></th>
                         </tr>
                     </thead>
                     <tbody>

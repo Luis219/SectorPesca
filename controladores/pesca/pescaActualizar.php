@@ -4,7 +4,7 @@
     $id = $_GET['id'];
 
     $cursor = $pesca->findOne(["_id"=>new MongoDB\BSON\ObjectId($id)]);
-    $cursor2 = $barcos->findOne(["_id"=>$cursor['barco_id']]);
+    $cursor2 = $barcos->findOne(["_id"=>new MongoDB\BSON\ObjectId($cursor['barco_id'])]);
 
     if (isset($_POST['submit'])) {
         $post_data = array();
