@@ -1,0 +1,70 @@
+/* Estilos para el login */
+@charset "utf-8";
+
+@import url//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+
+div.main{
+height:calc(100vh);
+width:100%;
+}
+
+/* ---------- GENERAL ---------- */
+
+* {
+  box-sizing: border-box;
+    margin:0px auto;
+
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+
+}
+
+body {
+  color: #1a75cf;
+  margin: 0;
+}
+
+.navbar {
+  place-self: center;
+  width: 100%;
+  background-color: #c4dcf8;
+  font-size: 9pt;
+  font-weight: bold;
+  color: rgb(21, 23, 109);
+  letter-spacing: 1px;
+}
+.tablaContenidos{
+  background-image: url("../img/fondo.jpg");
+  background-attachment: fixed;
+  background-size:100% 100%;
+  height:calc(200vh);
+  width:100%;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.tablaPrincipal{
+  font-size: 8pt;
+}
+
+.formActualizarAgregar{
+  font-size: 11pt;
+  color: #021868;
+  font-weight: bold;
+  padding-left: 400px;
+  padding-right: 400px;
+}
+h3{
+  text-align: center;
+  color: #021868;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+h5{
+  text-align: right;
+  color: #ffffff;
+  font-weight: bold;
+}
