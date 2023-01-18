@@ -28,6 +28,22 @@ $cursor = $clima->find();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Inicio pesca</title>
+    <style>
+        .card2 {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.temperature {
+  font-size: 3em;
+  color: #ffa500;
+}
+
+.icon {
+  width: 50px;
+}
+
+    </style>
 </head>
 
 <body>
@@ -44,13 +60,14 @@ $cursor = $clima->find();
                echo  'Bienvenido '.  $_SESSION['usuario'];
               
                 ?></p>
-            <div class="card-header text-center">
+            <div class="card-header text-center bg-warning ">
                 <h5>Clima </h5>
+
             </div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-hover mt-0">
-                            <thead class="table-primary">
+                            <thead class="table-dark">
                                 <tr>
                                     <th scope="col">ID</th>
                                     <th scope="col">Nombre</th>
@@ -66,7 +83,8 @@ $cursor = $clima->find();
                                     <th scope="col">Consumo Rutas</th>
                                     <th scope="col">ID Reserva</th>
                                     <th scope="col">Sea level</th>
-                                    <th scope="col">T. ª</th>
+                                    
+                                    <th scope="col">T. C</th>
                                     <th scope="col">Ciudad</th>
                                     <th scope="col">País</th>
                                     <th> <a id="btn" href="../etl/info.php" class="btn btn-secondary"><i class="fa fa-reply" aria-hidden="true"></i></a></th>
@@ -98,7 +116,26 @@ $cursor = $clima->find();
                                     <td><?php echo $document['consumomedio']; ?></td>
                                     <td><?php echo ( $document['idreserva']); ?></td>
                                     <td><?php echo $document['sealevel']; ?></td>
-                                    <td><?php echo $document['temp']; ?></td>
+                                    <td>
+                                    <div class="card2 text-center">
+                                        <div class="card-body">
+                                            
+                                            <?php if (($document['temp']-273.15)>=20) {?>
+                                                <img width="25px" src="https://png-1.vector.me/files/images/4/1/411975/weather_symbols_sun_preview" alt="Sun" class="icon">
+                                            <p class="card-text">Día soleado</p>
+                                            <?php } else{?>
+                                                <img width="25px" src="https://static.vecteezy.com/system/resources/previews/014/455/633/non_2x/illustration-creative-icon-3d-weather-forecast-sign-meteorological-sun-cloud-isolated-on-background-free-vector.jpg" alt="Sun" class="icon">
+                                                <p class="card-text">Día lluvioso</p>
+
+                                                <?php }?>
+                                            <h1 class="card-text temperature">  <?php echo $document['temp']-273.15; ?> C</h1>
+                                           
+                                        </div>
+                                    </div>
+                                             
+                                
+                                
+                                </td>
                                     <td><?php echo $document['city']; ?></td>
                                     <td><?php echo $document['country']; ?></td>
                                 </tr>
