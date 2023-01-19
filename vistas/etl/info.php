@@ -53,7 +53,7 @@ $cursor = $clima->find();
     ?>
     <!-- Fin barra de navegación -->
 
-    <div class="contenidoFormulario">
+    <div class="tablaPrincipal">
         <div class="card mt-3 mb-3 bg-light">
             <p> <?php
                
@@ -78,9 +78,9 @@ $cursor = $clima->find();
                                     <th scope="col">Origen Rutas</th>
                                     <th scope="col">Destino Rutas</th>
                                     <th scope="col">Millas Rutas</th>
-                                    <th scope="col">Observaciones Rutas</th>
+                                    <th scope="col">Equipo Requerido</th>
                                     <th scope="col">Velocidad Rutas</th>
-                                    <th scope="col">Consumo Rutas</th>
+                                    <th scope="col">Actividad</th>
                                     <th scope="col">ID Reserva</th>
                                     <th scope="col">Sea level</th>
                                     
@@ -111,9 +111,9 @@ $cursor = $clima->find();
                                     <td><?php echo $document['origen']; ?></td>
                                     <td><?php echo $document['destino']; ?></td>
                                     <td><?php echo $document['millas']; ?></td>
-                                    <td><?php echo $document['observaciones_1']; ?></td>
+                                    <td><?php echo $document['equiporequerido']; ?></td>
                                     <td><?php echo $document['velocidadmedia']; ?></td>
-                                    <td><?php echo $document['consumomedio']; ?></td>
+                                    <td><?php echo $document['detalleactividad']; ?></td>
                                     <td><?php echo ( $document['idreserva']); ?></td>
                                     <td><?php echo $document['sealevel']; ?></td>
                                     <td>
