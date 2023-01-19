@@ -1,0 +1,49 @@
+{
+    "coord": {
+        "lon": -79.7994,
+        "lat": -1.8675
+    },
+    "weather": [
+        {
+            "id": 501,
+            "main": "Rain",
+            "description": "moderate rain",
+            "icon": "10n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 299.81,
+        "feels_like": 299.81,
+        "temp_min": 299.15,
+        "temp_max": 299.81,
+        "pressure": 1013,
+        "humidity": 91,
+        "sea_level": 1013,
+        "grnd_level": 1012
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 1.99,
+        "deg": 132,
+        "gust": 4.87
+    },
+    "rain": {
+        "1h": 1.17
+    },
+    "clouds": {
+        "all": 96
+    },
+    "dt": 1674097806,
+    "sys": {
+        "type": 2,
+        "id": 2003019,
+        "country": "EC",
+        "sunrise": 1674040980,
+        "sunset": 1674084942
+    },
+    "timezone": -18000,
+    "id": 3652065,
+    "name": "Esmeraldas",
+    "cod": 200
+}

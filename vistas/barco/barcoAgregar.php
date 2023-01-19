@@ -41,7 +41,7 @@ include_once '../../controladores/barco/barcoAgregar.php';
                 </div>
                 <div class="mb-3">
                     <label for="address" class="form-label">Matricula</label>
-                    <input type="text" class="form-control" id="address" name="txtMatricula" aria-describedby="address" placeholder="1-AB-123" title="La matricula debe tener el siguiente formato: 1-AB-123" require>
+                    <input type="text" class="form-control" id="address" name="txtMatricula" aria-describedby="address" title="La matricula debe tener el siguiente formato: 1-AB-123" require>
                 </div>
                 <div class="mb-3">
                     <label for="contact" class="form-label">Tonelaje</label>
