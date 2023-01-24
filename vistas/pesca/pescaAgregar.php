@@ -32,7 +32,7 @@ $cursor = $barcos->find();
     <div class="tablaContenidos">
 
         <h3>AGREGAR NUEVA PESCA</h3>
-        <h5><a href="pescaInicio.php" class="btn btn-outline-light">Regresar</a></h5>
+        <h5><a href="pescaInicio.php" class="btn btn-outline-dark">Regresar</a></h5>
 
         <!-- Formulario principal-->
         <div class="formActualizarAgregar">

@@ -30,7 +30,7 @@ include_once '../../controladores/barco/barcoActualizar.php';
     <div class="tablaContenidos">
 
         <h3>ACTUALIZAR EMBARCACIÓN</h3>
-        <h5><a href="barcoVista.php" class="btn btn-outline-light">Regresar</a></h5>
+        <h5><a href="barcoVista.php" class="btn btn-outline-dark">Regresar</a></h5>
 
         <!-- Formulario principal-->
         <div class="formActualizarAgregar">

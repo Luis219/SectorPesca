@@ -1,5 +1,6 @@
 <?php
 include_once '../../controladores/pesca/pescaActualizar.php';
+$cursor2 = $barcos->find();
 ?>
 
 <!DOCTYPE html>
@@ -30,15 +31,19 @@ include_once '../../controladores/pesca/pescaActualizar.php';
     <div class="tablaContenidos">
 
         <h3>ACTUALIZAR PESCA</h3>
-        <h5><a href="pescaInicio.php" class="btn btn-outline-light">Regresar</a></h5>
+        <h5><a href="pescaInicio.php" class="btn btn-outline-dark">Regresar</a></h5>
 
         <!-- Formulario principal-->
         <div class="formActualizarAgregar">
             <form method="POST" class="my-3 mx-3">
 
                 <div class="mb-3">
-                    <label for="nombre" class="form-label">Barco</label>
-                    <input type="text" value="<?php echo $cursor2['nombre']; ?>" class="form-control" id="nombre" name="barco" aria-describedby="name">
+                    <label for="name" class="form-label">Nombre del Barco</label>
+                    <select name="barco" id="">
+                        <?php foreach ($cursor2 as $document) { ?>
+                            <option value="<?php echo $document['_id']; ?>"><?php echo $document['nombre']; ?></option>
+                        <?php } ?>
+                    </select>
                 </div>
 
                 <div class="mb-3">

@@ -30,7 +30,8 @@ $cursorb = $barcos->find();
     <div class="tablaContenidos">
 
         <h3>ACTUALIZAR TRIPULANTE</h3>
-        <h5><a href="trupulanteInicio.php" class="btn btn-outline-light">Regresar</a></h5>
+        <h5><a href="trupulanteInicio.php" class="btn btn-outline-dark
+        ">Regresar</a></h5>
 
         <!-- Formulario principal-->
         <div class="formActualizarAgregar">
@@ -73,7 +74,7 @@ $cursorb = $barcos->find();
                 </div>
                 <div class="mb-3">
                     <label for="address" class="form-label">Tipo de Sangre</label>
-                    <select value="<?php echo $cursor['tipoSangre']; ?>" name="tipoSangre" id="tipo" require>
+                    <select value="<?php echo $cursor['tipo_sangre']; ?>" name="tipoSangre" id="tipo" require>
                         <option value="ORH+">ORH+</option>
                         <option value="A+">A+</option>
                         <option value="A-">A-</option>
