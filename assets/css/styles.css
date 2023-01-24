@@ -4,7 +4,7 @@
 @import url//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
 
 div.main{
-height:calc(100vh);
+height:calc(90vh);
 width:100%;
 }
 
@@ -30,10 +30,10 @@ body {
   place-self: center;
   width: 100%;
   background-color: #c4dcf8;
-  font-size: 9pt;
+  font-size: 11pt;
   font-weight: bold;
   color: rgb(21, 23, 109);
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 .tablaContenidos{
   background-image: url("../img/fondo.jpg");
@@ -65,6 +65,6 @@ h3{
 
 h5{
   text-align: right;
-  color: #afa7a7;
+  color: #1d21f3;
   font-weight: bold;
 }

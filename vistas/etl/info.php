@@ -67,10 +67,9 @@ $cursor = $clima->find();
                     <thead style="font-size: 11pt">
                         <tr>
                             <th scope="col">ID</th>
-                            <th scope="col">Nombre</th>
+                            <th scope="col">Nombre y área</th>
                             <th scope="col">Categoría</th>
                             <th scope="col">Ley</th>
-                            <th scope="col">Área</th>
                             <th scope="col">Observaciones</th>
                             <th scope="col">Origen Rutas</th>
                             <th scope="col">Destino Rutas</th>
@@ -80,9 +79,9 @@ $cursor = $clima->find();
                             <th scope="col">Actividad</th>
                             <th scope="col">ID Reserva</th>
                             <th scope="col">Sea level</th>
-                            <th scope="col">T. C</th>
-                            <th scope="col">Ciudad</th>
-                            <th scope="col">País</th>
+                            <th scope="col" style="color:darkred;"><i>Pronóstico del tiempo</i></th>
+                            <th scope="col" style="color:darkred;"><i>Ciudad</i></th>
+                            <th scope="col" style="color:darkred;"><i>País</i></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -97,11 +96,10 @@ $cursor = $clima->find();
                                     $id = $document['_id'];
 
                                     $cursor2 = $clima->findOne(["_id" => new MongoDB\BSON\ObjectId($id)]);
-                                    echo $cursor2['nombre']; ?></td>
-
+                                    echo $cursor2['nombre_1']; ?>
+                                </td>
                                 <td><?php echo ($document['categoria']); ?></td>
                                 <td><?php echo ($document['ley']); ?></td>
-                                <td><?php echo ($document['area']); ?></td>
                                 <td><?php echo $document['observaciones']; ?></td>
                                 <td><?php echo $document['origen']; ?></td>
                                 <td><?php echo $document['destino']; ?></td>
@@ -127,9 +125,6 @@ $cursor = $clima->find();
 
                                         </div>
                                     </div>
-
-
-
                                 </td>
                                 <td><?php echo $document['city']; ?></td>
                                 <td><?php echo $document['country']; ?></td>

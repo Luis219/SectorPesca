@@ -1,0 +1,103 @@
+use proyectosectorPesquero;
+
+--Usuarios
+db.createCollection("usuarios");
+db.usuarios.insertOne(
+{
+ "user":"admin", 
+ "contraseña":"1",
+ "estado":1}
+);
+
+db.usuarios.insertOne(
+{
+ "user":"empleado", 
+ "contraseña":"1",
+ "estado":1}
+);
+
+
+--Roles
+db.createCollection("roles");
+db.roles.insertOne(
+{
+ "descripcion":"admin",
+ 
+});
+db.roles.insertOne(
+{
+ "descripcion":"empleado",
+ 
+});
+
+db.roles.insertOne(
+{
+ "descripcion":"secretaria",
+});
+
+--Usuarios-Roles
+db.createCollection("usuariosRoles");
+
+
+db.usuariosRoles.insertOne(
+{"usuarios_id":"6387e6d23fd844edce484a0c", 
+"roles_id":"6387e5ed3fd844edce484a09"}
+)
+db.usuariosRoles.insertOne(
+{"usuarios_id":"63c8cefa0a4c09c80925753e", 
+"roles_id":"63c16af2f987159b9f926983"}
+)
+
+
+--Barcos
+db.createCollection("barcos");
+db.barcos.insertOne({"_id":1, 
+"nombre":"barco1", 
+"matricula":"zxy123", 
+"tonelaje":5000});
+
+db.barcos.insertOne({
+"nombre":"barco2", 
+"matricula":"zxy124", 
+"tonelaje":5500});
+
+--Pesca
+db.createCollection("pesca");
+db.pesca.insertOne(
+{
+"barco_id" : "6386d1fdb5060000ba003099",
+ "descripcion" : "Aguas nacionales", 
+"horarioSalida" : ISODate("1970-01-20T07:50:39.360Z"),
+"usuario_id" : "6387e6d23fd844edce484a0c"
+});
+db.pesca.insertOne(
+{
+ "barco_id" : "6386d57db5060000ba00309d", 
+"descripcion" : "nueva pesca", 
+"horarioSalida" : ISODate("1970-01-20T07:50:41.400Z"),
+ "usuario_id" : "6387e6d23fd844edce484a0c"
+});
+
+
+--Tripulante
+db.createCollection("tripulante");
+db.tripulante.insertOne(
+{
+ "barco_id" : "6386d245b5060000ba00309a", 
+"nombres" : "zarpafo", 
+"cedula" : "2351050307",
+ "correo" : "luis_paredez@outlook.com"
+});
+db.tripulante.insertOne(
+{
+ "barco_id" : "6386d245b5060000ba00309a", 
+"nombres" : "viaje2", 
+"cedula" : "2351050308", 
+"correo" : "franciscaalcivar@gmail"
+});
+
+
+
+
+
+

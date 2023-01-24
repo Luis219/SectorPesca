@@ -20,7 +20,7 @@
 
         <ul class="navbar-nav">
             <li class="nav-item">
-                <img src="../../assets/img/logo.png" alt="logo" style="min-height: 15px; max-height: 35px">
+                <img src="../../assets/img/logo.png" alt="logo" style="min-height: 15px; max-height: 55px">
             </li>
         </ul>
     </nav>
