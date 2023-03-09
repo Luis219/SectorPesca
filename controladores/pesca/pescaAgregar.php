@@ -9,12 +9,12 @@
        $post_data['millas_recorrer'] = $_POST['millas'];
        $post_data['numero_tripulantes'] = $_POST['ntripulantes'];
        $post_data['dias_pesca'] = $_POST['diaspesca'];
-       $post_data['tipo_pesca'] = $_POST['tipoPesca'];
-       $post_data['descripcion'] = $_POST['descripcion'];
+       $post_data['incidente_pesca'] = $_POST['incidentePesca'];
+       $post_data['cantidad_pesca_capturada'] = $_POST['cantidadPescaCapturada'];
      
        $post_data['usuario_id'] = $_POST['usuario'];
 
-       if (($post_data['barco_id']=="")||($post_data['descripcion']=="")||($post_data['horarioSalida']=="")) {
+       if (($post_data['barco_id']=="")||($post_data['horarioSalida']=="")||($post_data['millas_recorrer']=="")||($post_data['numero_tripulantes']=="")||($post_data['dias_pesca']=="")||($post_data['cantidad_pesca_capturada']=="")) {
             echo "<div class='alert alert-danger'>Campos vacios! </div>";
         }else {
             $pesca->insertOne($post_data);

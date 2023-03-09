@@ -52,11 +52,11 @@ $cursor = $pesca->find();
                             <th scope="col">Id</th>
                             <th scope="col">Barco</th>
                             <th scope="col">Horario de salida</th>
-                            <th scope="col">Millas a recorrer</th>
-                            <th scope="col">Número de Tripulantes</th>
+                            <th scope="col">Millas recorridas</th>
+                            <th scope="col">Número de tripulantes</th>
                             <th scope="col">Días de pesca</th>
-                            <th scope="col">Tipo de pesca</th>
-                            <th scope="col">Descripción</th>
+                            <th scope="col">Incidente durante la pesca</th>
+                            <th scope="col">Cantidad de pesca capturada</th>
                             <th style="text-align:center"> <a id="btn" href="pescaAgregar.php" class="btn btn-secondary"><i class="fa fa-plus"></i></a></th>
                         </tr>
                     </thead>
@@ -78,8 +78,8 @@ $cursor = $pesca->find();
                                 <td><?php echo ($document['millas_recorrer']); ?></td>
                                 <td><?php echo ($document['numero_tripulantes']); ?></td>
                                 <td><?php echo ($document['dias_pesca']); ?></td>
-                                <td><?php echo ($document['tipo_pesca']); ?></td>
-                                <td><?php echo $document['descripcion']; ?></td>
+                                <td><?php echo ($document['incidente_pesca']); ?></td>
+                                <td><?php echo $document['cantidad_pesca_capturada']; ?></td>
                                 <!-- Delete Button -->
                                 <td style="text-align:center">
                                     <?php

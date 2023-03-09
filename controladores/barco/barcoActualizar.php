@@ -22,4 +22,3 @@
 
         echo "<div class='alert alert-success'> Actualización Exitosa </div>";
     }
-?>

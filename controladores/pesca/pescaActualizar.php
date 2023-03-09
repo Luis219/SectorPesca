@@ -14,8 +14,8 @@
         $post_data['millas_recorrer'] = $_POST['millas'];
         $post_data['numero_tripulantes'] = $_POST['ntripulantes'];
         $post_data['dias_pesca'] = $_POST['diaspesca'];
-        $post_data['tipo_pesca'] = $_POST['tipoPesca'];
-        $post_data['descripcion'] = $_POST['descripcion'];
+        $post_data['incidente_pesca'] = $_POST['incidentePesca'];
+        $post_data['cantidad_pesca_capturada'] = $_POST['cantidadPescaCapturada'];
       
  
         $result = $pesca->updateOne(['_id'=> new MongoDB\BSON\ObjectId($_GET['id'])],['$set'=>$post_data],['upsert' => true]);

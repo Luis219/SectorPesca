@@ -47,11 +47,11 @@ $cursor2 = $barcos->find();
                 </div>
 
                 <div class="mb-3">
-                    <label for="horario" class="form-label">Horario Salida</label>
+                    <label for="horario" class="form-label">Horario de salida</label>
                     <input type="datetime-local" value="<?php echo $cursor['horarioSalida']; ?>" class="form-control" id="horario" name="horarioSalida" aria-describedby="address">
                 </div>
                 <div class="mb-3">
-                    <label for="address" class="form-label">Millas a recorrer</label>
+                    <label for="address" class="form-label">Millas recorridas</label>
                     <input type="text" value="<?php echo $cursor['millas_recorrer']; ?>" class="form-control" id="address" name="millas" aria-describedby="address" pattern="[\d]{1,5}" title="Ingrese de uno a cinco dígitos" require>
                 </div>
                 <div class="mb-3">
@@ -59,20 +59,21 @@ $cursor2 = $barcos->find();
                     <input type="number" value="<?php echo $cursor['numero_tripulantes']; ?>" class="form-control" id="address" name="ntripulantes" aria-describedby="address" require>
                 </div>
                 <div class="mb-3">
-                    <label for="address" class="form-label">Días de Pesca</label>
+                    <label for="address" class="form-label">Días de pesca</label>
                     <input type="number" value="<?php echo $cursor['dias_pesca']; ?>" class="form-control" id="address" name="diaspesca" aria-describedby="address" require>
                 </div>
                 <div class="mb-3">
-                    <label for="address" class="form-label">Tipo de pesca</label>
-                    <select name="tipoPesca" id="tipo">
-                        <option value="Gran Altura">Gran Altura</option>
-                        <option value="Altura">Altura</option>
-                        <option value="Bajura">Bajura</option>
+                    <label for="address" class="form-label">Incidente durante la pesca</label>
+                    <select name="incidentePesca" id="tipo">
+                        <option value="Sin incidentes">Sin incidentes</option>
+                        <option value="Lesiones en la tripulación">Lesiones en la tripulación</option>
+                        <option value="Daños en el barco">Daños en el barco</option>
+                        <option value="Lesiones y daños">Lesiones y daños</option>
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="address" class="form-label">Descripción</label>
-                    <input type="text" value="<?php echo $cursor['descripcion']; ?>" class="form-control" id="desc" name="descripcion" aria-describedby="address" pattern="[a-zA-Z0-9\s]{2,}" title="Ingrese una descripción" require>
+                    <label for="address" class="form-label">Cantidad de pesca capturada</label>
+                    <input type="number" value="<?php echo $cursor['cantidad_pesca_capturada']; ?>" class="form-control" id="desc" name="cantidadPescaCapturada" aria-describedby="address" pattern="[\d]{1,5}" title="Ingrese la cantidad de pesca capturada" require>
                 </div>
                 <div style="text-align: center;">
                     <input type="submit" name="submit" class="btn btn-success" value="Actualizar" />

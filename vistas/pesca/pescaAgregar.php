@@ -49,33 +49,34 @@ $cursor = $barcos->find();
                 <input type="text" value="<?php echo $_SESSION['id']; ?>" name="usuario" hidden>
 
                 <div class="mb-3">
-                    <label for="contact" class="form-label">Horario Salida</label>
+                    <label for="contact" class="form-label">Horario de salida</label>
                     <input type="datetime-local" class="form-control" id="contact" name="horarioSalida" aria-describedby="address" require>
 
                 </div>
                 <div class="mb-3">
-                    <label for="address" class="form-label">Millas a recorrer</label>
-                    <input type="text" class="form-control" id="millas" name="millas" aria-describedby="address" pattern="[\d]{1,5}" title="Ingrese de uno a cinco dígitos" require>
+                    <label for="address" class="form-label">Millas recorridas</label>
+                    <input type="number" class="form-control" id="millas" name="millas" aria-describedby="address" pattern="[\d]{1,5}" title="Ingrese de uno a cinco dígitos" require>
                 </div>
                 <div class="mb-3">
                     <label for="address" class="form-label">Número de tripulantes</label>
                     <input type="number" class="form-control" id="tripulantes" name="ntripulantes" aria-describedby="address" require>
                 </div>
                 <div class="mb-3">
-                    <label for="address" class="form-label">Días de Pesca</label>
+                    <label for="address" class="form-label">Días de pesca</label>
                     <input type="number" class="form-control" id="dias" name="diaspesca" aria-describedby="address" require>
                 </div>
                 <div class="mb-3">
-                    <label for="address" class="form-label">Tipo de pesca</label>
-                    <select name="tipoPesca" id="tipo">
-                        <option value="Gran Altura">Gran Altura</option>
-                        <option value="Altura">Altura</option>
-                        <option value="Bajura">Bajura</option>
+                    <label for="address" class="form-label">Incidente durante la pesca</label>
+                    <select name="incidentePesca" id="tipo">
+                        <option value="Sin incidentes">Sin incidentes</option>
+                        <option value="Lesiones en la tripulación">Lesiones en la tripulación</option>
+                        <option value="Daños en el barco">Daños en el barco</option>
+                        <option value="Lesiones y daños">Lesiones y daños</option>
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="address" class="form-label">Descripcion</label>
-                    <input type="text" class="form-control" id="address" name="descripcion" aria-describedby="address" pattern="[a-zA-Z0-9\s]{2,}" title="Ingrese una descripción" require>
+                    <label for="address" class="form-label">Cantidad de pesca capturada</label>
+                    <input type="number" class="form-control" id="address" name="cantidadPescaCapturada" aria-describedby="address" pattern="[\d]{1,5}" title="Ingrese la cantidad de pesca capturada" require>
                 </div>
                 <div style="text-align: center;">
                     <input type="submit" name="submit" class="btn btn-success" value="Agregar" />

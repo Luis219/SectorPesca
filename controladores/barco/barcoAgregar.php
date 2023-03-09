@@ -12,7 +12,7 @@
        $post_data['color'] = $_POST['txtColor'];
        $post_data['tipo'] = $_POST['txtTipo'];
 
-       if (($post_data['nombre']=="")||($post_data['matricula']=="")||($post_data['tonelaje']=="")) {
+       if (($post_data['nombre']=="")||($post_data['matricula']=="")||($post_data['tonelaje']=="")||($post_data['anio_construccion']=="")||($post_data['color']=="")) {
             echo "<div class='alert alert-danger'>Campos vacios! </div>";
         }else {
             $barcos->insertOne($post_data);

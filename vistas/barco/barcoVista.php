@@ -53,10 +53,10 @@ $cursor = $barcos->find();
                             <th scope="col">Id</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Matricula</th>
-                            <th scope="col">Tonelaje</th>
-                            <th scope="col">Año de Construcción</th>
+                            <th scope="col">Tonelaje de carga</th>
+                            <th scope="col">Fecha de Construcción</th>
                             <th scope="col">Color</th>
-                            <th scope="col">Tipo</th>
+                            <th scope="col">Tipo de barco</th>
                             <th style="text-align:center"> <a id="btn" href="barcoAgregar.php" class="btn btn-secondary"><i class="fa fa-plus fa-long"></i></a></th>
                         </tr>
                     </thead>

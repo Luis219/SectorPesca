@@ -44,8 +44,8 @@ include_once '../../controladores/barco/barcoActualizar.php';
                     <input type="text" value="<?php echo $cursor['matricula']; ?>" class="form-control" id="matricula" name="txtMatricula" aria-describedby="address" title="La matricula debe tener el siguiente formato: 1-AB-123" require>
                 </div>
                 <div class="mb-3">
-                    <label for="contact" class="form-label">Tonelaje</label>
-                    <input type="text" value="<?php echo $cursor['tonelaje']; ?>" class="form-control" id="tonelaje" name="txtTonelaje" aria-describedby="address" pattern="[\d]{1,5}" title="Ingrese de uno a cinco dígitos" require>
+                    <label for="contact" class="form-label">Tonelaje de carga</label>
+                    <input type="number" value="<?php echo $cursor['tonelaje']; ?>" class="form-control" id="tonelaje" name="txtTonelaje" aria-describedby="address" pattern="[\d]{1,5}" title="Ingrese de uno a cinco dígitos" require>
                 </div>
                 <div class="mb-3">
                     <label for="contact" class="form-label">Fecha de Construcción</label>
@@ -56,11 +56,11 @@ include_once '../../controladores/barco/barcoActualizar.php';
                     <input type="text" value="<?php echo $cursor['color']; ?>" class="form-control" id="tonelaje" name="txtColor" aria-describedby="address" pattern="[a-zA-ZáéíóúÁÉÍÓÚ\s]{3,}" title="El color debe contener al menos tres letras" require>
                 </div>
                 <div class="mb-3">
-                    <label for="contact" class="form-label">Tipo de embarcación</label>
+                    <label for="contact" class="form-label">Tipo de barco</label>
                     <select name="txtTipo" id="tipo" value="<?php echo $cursor['tipo']; ?>" require>
-                        <option value="Pesquero">Pesquero</option>
-                        <option value="Transporte">Transporte</option>
-                        <option value="Reconocimiento">Reconocimiento</option>
+                        <option value="Barco de arrastre">Barco de arrastre</option>
+                        <option value="Barco de cerco">Barco de cerco</option>
+                        <option value="Barco de palangre">Barco de palangre</option>
                     </select>
                 </div>
                 <div style="text-align: center;">
